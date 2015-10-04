@@ -6,6 +6,7 @@ SmilesComponentComponent = Ember.Component.extend
 
   _init: (->
     @socket = this.get('socketIOService').socketFor('http://nsumint.ru:8080/')
+    @$('#smiles.modal .modal-body').niceScroll()
   ).on('didInsertElement')
 
   isDisabled: (->

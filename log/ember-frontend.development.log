@@ -1929,3 +1929,59 @@ Babel (5)                                     | 36ms (7 ms)
 Concat: Test Support JS (1)                   | 29ms                
 TreeMerger (appAndDependencies) (1)           | 28ms                
 
+file changed components/smiles-component.coffee
+
+Build successful - 825ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 189ms               
+Funnel: App JS Files                          | 157ms               
+TreeMerger (appAndDependencies)               | 45ms                
+Concat: Test Support JS                       | 42ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 189ms               
+Funnel: App JS Files (1)                      | 157ms               
+SourcemapConcat (3)                           | 73ms (24 ms)        
+Babel (5)                                     | 51ms (10 ms)        
+TreeMerger (appAndDependencies) (1)           | 45ms                
+Concat: Test Support JS (1)                   | 42ms                
+
+file changed components/smiles-component.coffee
+
+Build successful - 634ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 124ms               
+Funnel: App JS Files                          | 105ms               
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 124ms               
+Funnel: App JS Files (1)                      | 105ms               
+SourcemapConcat (3)                           | 48ms (16 ms)        
+Babel (5)                                     | 40ms (8 ms)         
+CoffeeScriptFilter (2)                        | 35ms (17 ms)        
+
+file changed components/smiles-component.coffee
+
+Build successful - 566ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 123ms               
+Funnel: App JS Files                          | 101ms               
+Babel                                         | 36ms                
+TreeMerger (appAndDependencies)               | 29ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 123ms               
+Funnel: App JS Files (1)                      | 101ms               
+Babel (5)                                     | 50ms (10 ms)        
+SourcemapConcat (3)                           | 46ms (15 ms)        
+TreeMerger (appAndDependencies) (1)           | 29ms                
+
