@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
   get '/user/kick_user_from_queue', to: 'api/v1/users#kick_user_from_queue'
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'welcome#index'
 end

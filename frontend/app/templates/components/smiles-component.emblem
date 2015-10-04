@@ -11,9 +11,9 @@ i.fa.fa-smile-o.fa-2x{action 'openModal'}
           .center-text
             small использованы стикеры Телеграма
           = each sticker in stickers
-            .col-md-3.sticker
+            .col-md-4.sticker
               sticker-component sticker=sticker value=value
 
       .modal-footer
         button.btn.btn-default{action 'cancel'} type="button"  Отменить
-        button.btn.btn-default.active{action 'send'} type="button"  Отправить
+        button.btn.btn-default.active{action 'send'} type="button" disabled=isDisabled  Отправить

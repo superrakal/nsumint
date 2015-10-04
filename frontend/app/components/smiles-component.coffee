@@ -8,12 +8,17 @@ SmilesComponentComponent = Ember.Component.extend
     @socket = this.get('socketIOService').socketFor('http://nsumint.ru:8080/')
   ).on('didInsertElement')
 
+  isDisabled: (->
+    (@get 'value').length <= 0
+  ).property('value')
+
 
   actions:
     openModal: ->
       @$('#smiles.modal').modal('show')
 
     cancel: ->
+      @set 'value', ''
       @$('#smiles.modal').modal('hide')
 
     send: ->
