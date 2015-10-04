@@ -8,6 +8,8 @@ i.fa.fa-smile-o.fa-2x{action 'openModal'}
         h4.modal-title Выбор стикера
       .modal-body
         .container-fluid
+          .center-text
+            small использованы стикеры Телеграма
           = each sticker in stickers
             .col-md-3.sticker
               sticker-component sticker=sticker value=value

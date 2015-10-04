@@ -1685,3 +1685,82 @@ Funnel: App JS Files (1)                      | 101ms
 SourcemapConcat (3)                           | 45ms (15 ms)        
 TreeMerger (appAndDependencies) (1)           | 32ms                
 
+file changed templates/components/smiles-component.emblem
+
+Build successful - 539ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 126ms               
+Funnel: App JS Files                          | 104ms               
+TreeMerger (appAndDependencies)               | 27ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 126ms               
+Funnel: App JS Files (1)                      | 104ms               
+SourcemapConcat (3)                           | 47ms (15 ms)        
+TreeMerger (appAndDependencies) (1)           | 27ms                
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 694ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 197ms               
+Funnel: App JS Files                          | 114ms               
+TreeMerger (appAndDependencies)               | 39ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 197ms               
+Funnel: App JS Files (1)                      | 114ms               
+SourcemapConcat (3)                           | 48ms (16 ms)        
+TreeMerger (appAndDependencies) (1)           | 39ms                
+Babel (5)                                     | 35ms (7 ms)         
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 543ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 124ms               
+Funnel: App JS Files                          | 96ms                
+ES6: App Tree                                 | 31ms                
+SourcemapConcat                               | 28ms                
+Concat: Test Support JS                       | 28ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 124ms               
+Funnel: App JS Files (1)                      | 96ms                
+SourcemapConcat (3)                           | 54ms (18 ms)        
+ES6: App Tree (1)                             | 31ms                
+Concat: Test Support JS (1)                   | 28ms                
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 635ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 124ms               
+Funnel: App JS Files                          | 114ms               
+Concat: Test Support JS                       | 48ms                
+SourcemapConcat                               | 42ms                
+ES6: App Tree                                 | 38ms                
+Concat: App                                   | 36ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 124ms               
+Funnel: App JS Files (1)                      | 114ms               
+SourcemapConcat (3)                           | 68ms (22 ms)        
+Concat: Test Support JS (1)                   | 48ms                
+ES6: App Tree (1)                             | 38ms                
+Concat: App (1)                               | 36ms                
+
