@@ -2,6 +2,9 @@
 
 ChatRoute = Ember.Route.extend
 
+  beforeModel :->
+    @store.find('sticker')
+
   model: ->
     id = $.cookie('user_id')
     @store.find('user', id)
@@ -14,6 +17,7 @@ ChatRoute = Ember.Route.extend
         @controllerFor("application").set('isChatting', true)
 
   setupController: (controller, model) ->
+    controller.set 'stickers', @store.all('sticker')
     controller.set 'model', model
 
 `export default ChatRoute`

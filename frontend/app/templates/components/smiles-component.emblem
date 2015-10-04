@@ -1,0 +1,17 @@
+i.fa.fa-smile-o.fa-2x{action 'openModal'}
+#smiles.modal.fade aria-labelledby="Smiles" role="dialog" tabindex="-1"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  &times;
+        h4.modal-title Выбор стикера
+      .modal-body
+        .container-fluid
+          = each sticker in stickers
+            .col-md-3.sticker
+              sticker-component sticker=sticker value=value
+
+      .modal-footer
+        button.btn.btn-default{action 'cancel'} type="button"  Отменить
+        button.btn.btn-default.active{action 'send'} type="button"  Отправить

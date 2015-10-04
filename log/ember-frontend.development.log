@@ -731,3 +731,957 @@ Slowest Trees (cumulative)                    | Total (avg)
 Concat: Vendor (1)                            | 1875ms              
 CoffeeScriptFilter (2)                        | 160ms (80 ms)       
 
+Future versions of Ember CLI will not support v0.10.25. Please update to Node 0.12 or io.js.
+version: 1.13.1
+Could not find watchman, falling back to NodeWatcher for file system events.
+Visit http://www.ember-cli.com/#watchman for more info.
+BuildingBuilding.Building..Building...BuildingBuilding...
+
+Build successful - 3181ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 1863ms              
+Babel                                         | 359ms               
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 1863ms              
+Babel (5)                                     | 626ms (125 ms)      
+CoffeeScriptFilter (2)                        | 167ms (83 ms)       
+
+Future versions of Ember CLI will not support v0.10.25. Please update to Node 0.12 or io.js.
+version: 1.13.1
+Could not find watchman, falling back to NodeWatcher for file system events.
+Visit http://www.ember-cli.com/#watchman for more info.
+BuildingBuilding.Building..Building...Building...
+
+Build successful - 2699ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 1845ms              
+ES6: App Tree                                 | 142ms               
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 1845ms              
+CoffeeScriptFilter (2)                        | 161ms (80 ms)       
+ES6: App Tree (1)                             | 142ms               
+
+file changed templates/components/message-input.emblem
+
+Build successful - 630ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 118ms               
+Funnel: App JS Files                          | 111ms               
+Concat: Test Support JS                       | 48ms                
+SourcemapConcat                               | 37ms                
+SourcemapConcat                               | 33ms                
+TreeMerger (appAndDependencies)               | 32ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 118ms               
+Funnel: App JS Files (1)                      | 111ms               
+SourcemapConcat (3)                           | 73ms (24 ms)        
+Concat: Test Support JS (1)                   | 48ms                
+TreeMerger (appAndDependencies) (1)           | 32ms                
+
+file changed templates/components/message-input.emblem
+
+Build successful - 520ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 119ms               
+Funnel: App JS Files                          | 94ms                
+Concat: Test Support JS                       | 28ms                
+TreeMerger (appAndDependencies)               | 26ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 119ms               
+Funnel: App JS Files (1)                      | 94ms                
+SourcemapConcat (3)                           | 46ms (15 ms)        
+Concat: Test Support JS (1)                   | 28ms                
+TreeMerger (appAndDependencies) (1)           | 26ms                
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 521ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 125ms               
+Funnel: App JS Files                          | 93ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 125ms               
+Funnel: App JS Files (1)                      | 93ms                
+SourcemapConcat (3)                           | 45ms (15 ms)        
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 525ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 126ms               
+ES6: App Tree                                 | 72ms                
+Funnel: App JS Files                          | 38ms                
+TreeMerger (appAndDependencies)               | 26ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 126ms               
+ES6: App Tree (1)                             | 72ms                
+SourcemapConcat (3)                           | 47ms (15 ms)        
+Funnel: App JS Files (1)                      | 38ms                
+Babel (5)                                     | 27ms (5 ms)         
+TreeMerger (appAndDependencies) (1)           | 26ms                
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 533ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 178ms               
+Funnel: App JS Files                          | 37ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 178ms               
+SourcemapConcat (3)                           | 48ms (16 ms)        
+Funnel: App JS Files (1)                      | 37ms                
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed components/smiles-component.coffee
+
+Build successful - 582ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 162ms               
+Babel                                         | 55ms                
+Funnel: App JS Files                          | 42ms                
+SourcemapConcat                               | 41ms                
+Concat: Test Support JS                       | 30ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 162ms               
+Babel (5)                                     | 68ms (13 ms)        
+SourcemapConcat (3)                           | 66ms (22 ms)        
+Funnel: App JS Files (1)                      | 42ms                
+Concat: Test Support JS (1)                   | 30ms                
+
+file changed components/smiles-component.coffee
+
+Build successful - 648ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 126ms               
+ES6: App Tree                                 | 87ms                
+Funnel: App JS Files                          | 66ms                
+Babel                                         | 35ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 126ms               
+ES6: App Tree (1)                             | 87ms                
+Babel (5)                                     | 68ms (13 ms)        
+Funnel: App JS Files (1)                      | 66ms                
+SourcemapConcat (3)                           | 47ms (15 ms)        
+CoffeeScriptFilter (2)                        | 38ms (19 ms)        
+
+file changed components/smiles-component.coffee
+file added components/file-upload.coffee___jb_bak___
+file deleted components/file-upload.coffee___jb_bak___
+file changed components/file-upload.coffee
+
+Build successful - 572ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 121ms               
+Funnel: App JS Files                          | 90ms                
+Babel                                         | 45ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 121ms               
+Funnel: App JS Files (1)                      | 90ms                
+Babel (5)                                     | 57ms (11 ms)        
+SourcemapConcat (3)                           | 51ms (17 ms)        
+CoffeeScriptFilter (2)                        | 30ms (15 ms)        
+
+file added components/smiles-component.coffee___jb_old___
+file changed components/smiles-component.coffee
+file deleted components/smiles-component.coffee___jb_old___
+
+Build successful - 525ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 135ms               
+Funnel: App JS Files                          | 87ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 135ms               
+Funnel: App JS Files (1)                      | 87ms                
+SourcemapConcat (3)                           | 45ms (15 ms)        
+Babel (5)                                     | 28ms (5 ms)         
+Concat: Test Support JS (1)                   | 27ms                
+
+file added templates/components/smiles-component.emblem___jb_old___
+file changed templates/components/smiles-component.emblem
+file deleted templates/components/smiles-component.emblem___jb_old___
+
+Build successful - 868ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 214ms               
+ES6: App Tree                                 | 109ms               
+Funnel: App JS Files                          | 68ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 214ms               
+ES6: App Tree (1)                             | 109ms               
+SourcemapConcat (3)                           | 79ms (26 ms)        
+Funnel: App JS Files (1)                      | 68ms                
+TemplateCompiler (2)                          | 45ms (22 ms)        
+
+file added templates/components/tmp
+file added models/sticker.coffee
+file changed models/sticker.coffee
+file added unit/models/sticker-test.coffee
+file changed unit/models/sticker-test.coffee
+
+Build successful - 507ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 119ms               
+ES6: App Tree                                 | 66ms                
+Funnel: App JS Files                          | 38ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 119ms               
+ES6: App Tree (1)                             | 66ms                
+SourcemapConcat (3)                           | 46ms (15 ms)        
+Funnel: App JS Files (1)                      | 38ms                
+Babel (5)                                     | 32ms (6 ms)         
+
+
+Build successful - 482ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 164ms               
+Funnel: App JS Files                          | 40ms                
+Concat: Test Support JS                       | 27ms                
+Concat: App                                   | 24ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 164ms               
+SourcemapConcat (3)                           | 47ms (15 ms)        
+Funnel: App JS Files (1)                      | 40ms                
+Concat: Test Support JS (1)                   | 27ms                
+Concat: App (1)                               | 24ms                
+
+file changed models/sticker.coffee
+
+Build successful - 575ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 195ms               
+Funnel: App JS Files                          | 41ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 195ms               
+SourcemapConcat (3)                           | 47ms (15 ms)        
+Funnel: App JS Files (1)                      | 41ms                
+Babel (5)                                     | 41ms (8 ms)         
+
+file changed models/sticker.coffee
+
+Build successful - 824ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 277ms               
+Funnel: App JS Files                          | 66ms                
+TreeMerger (appAndDependencies)               | 52ms                
+Concat: Test Support JS                       | 45ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 277ms               
+SourcemapConcat (3)                           | 76ms (25 ms)        
+Funnel: App JS Files (1)                      | 66ms                
+TreeMerger (appAndDependencies) (1)           | 52ms                
+Concat: Test Support JS (1)                   | 45ms                
+Babel (5)                                     | 41ms (8 ms)         
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 550ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 131ms               
+Funnel: App JS Files                          | 87ms                
+Concat: Test Support JS                       | 36ms                
+SourcemapConcat                               | 33ms                
+TreeMerger (appAndDependencies)               | 29ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 131ms               
+Funnel: App JS Files (1)                      | 87ms                
+SourcemapConcat (3)                           | 56ms (18 ms)        
+Concat: Test Support JS (1)                   | 36ms                
+TreeMerger (appAndDependencies) (1)           | 29ms                
+
+file changed templates/chat.emblem
+
+Build successful - 526ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 120ms               
+Funnel: App JS Files                          | 88ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 120ms               
+Funnel: App JS Files (1)                      | 88ms                
+SourcemapConcat (3)                           | 45ms (15 ms)        
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed routes/chat.coffee
+
+Build successful - 533ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 127ms               
+Funnel: App JS Files                          | 88ms                
+Concat: Test Support JS                       | 27ms                
+Babel                                         | 26ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 127ms               
+Funnel: App JS Files (1)                      | 88ms                
+SourcemapConcat (3)                           | 47ms (15 ms)        
+Babel (5)                                     | 38ms (7 ms)         
+Concat: Test Support JS (1)                   | 27ms                
+
+Future versions of Ember CLI will not support v0.10.25. Please update to Node 0.12 or io.js.
+version: 1.13.1
+Could not find watchman, falling back to NodeWatcher for file system events.
+Visit http://www.ember-cli.com/#watchman for more info.
+BuildingBuilding.Building..Building...Building...
+
+Build successful - 3400ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 2439ms              
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 2439ms              
+CoffeeScriptFilter (2)                        | 198ms (99 ms)       
+
+Future versions of Ember CLI will not support v0.10.25. Please update to Node 0.12 or io.js.
+version: 1.13.1
+Could not find watchman, falling back to NodeWatcher for file system events.
+Visit http://www.ember-cli.com/#watchman for more info.
+BuildingBuilding.Building..Building...Building...
+
+Build successful - 2829ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 1934ms              
+ES6: App Tree                                 | 146ms               
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 1934ms              
+CoffeeScriptFilter (2)                        | 196ms (98 ms)       
+ES6: App Tree (1)                             | 146ms               
+
+file changed templates/components/message-input.emblem
+
+Build successful - 597ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 187ms               
+Funnel: App JS Files                          | 41ms                
+Concat: Test Support JS                       | 40ms                
+SourcemapConcat                               | 31ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 187ms               
+SourcemapConcat (3)                           | 57ms (19 ms)        
+Funnel: App JS Files (1)                      | 41ms                
+Concat: Test Support JS (1)                   | 40ms                
+Babel (5)                                     | 35ms (7 ms)         
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 543ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 184ms               
+Funnel: App JS Files                          | 41ms                
+TreeMerger (appAndDependencies)               | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 184ms               
+SourcemapConcat (3)                           | 45ms (15 ms)        
+Funnel: App JS Files (1)                      | 41ms                
+TreeMerger (appAndDependencies) (1)           | 27ms                
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 521ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 173ms               
+Funnel: App JS Files                          | 40ms                
+TreeMerger (appAndDependencies)               | 27ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 173ms               
+SourcemapConcat (3)                           | 46ms (15 ms)        
+Funnel: App JS Files (1)                      | 40ms                
+TreeMerger (appAndDependencies) (1)           | 27ms                
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 532ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 118ms               
+Funnel: App JS Files                          | 97ms                
+TreeMerger (appAndDependencies)               | 30ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 118ms               
+Funnel: App JS Files (1)                      | 97ms                
+SourcemapConcat (3)                           | 45ms (15 ms)        
+TreeMerger (appAndDependencies) (1)           | 30ms                
+Babel (5)                                     | 28ms (5 ms)         
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 534ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 126ms               
+Funnel: App JS Files                          | 96ms                
+TreeMerger (appAndDependencies)               | 30ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 126ms               
+Funnel: App JS Files (1)                      | 96ms                
+SourcemapConcat (3)                           | 48ms (16 ms)        
+TreeMerger (appAndDependencies) (1)           | 30ms                
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed components/smiles-component.coffee
+file changed templates/components/smiles-component.emblem
+File: frontend/templates/components/smiles-component.emblem (3)
+Expected _4BeginStatement or end of input but "\uEFEF" found.
+file changed templates/components/smiles-component.emblem
+
+Build successful - 546ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 134ms               
+Funnel: App JS Files                          | 79ms                
+TreeMerger (appAndDependencies)               | 35ms                
+Concat: Test Support JS                       | 29ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 134ms               
+Funnel: App JS Files (1)                      | 79ms                
+SourcemapConcat (3)                           | 49ms (16 ms)        
+TreeMerger (appAndDependencies) (1)           | 35ms                
+Concat: Test Support JS (1)                   | 29ms                
+
+file changed components/smiles-component.coffee
+file changed templates/components/smiles-component.emblem
+
+Build successful - 559ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 167ms               
+Funnel: App JS Files                          | 40ms                
+Babel                                         | 28ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 167ms               
+SourcemapConcat (3)                           | 46ms (15 ms)        
+Babel (5)                                     | 41ms (8 ms)         
+Funnel: App JS Files (1)                      | 40ms                
+TemplateCompiler (2)                          | 29ms (14 ms)        
+
+file added components/sticker-component.coffee
+file added templates/components/sticker-component.hbs
+file changed components/sticker-component.coffee
+file changed templates/components/sticker-component.hbs
+file added integration/components/sticker-component-test.coffee
+file added unit/components/sticker-component-test.coffee
+file changed unit/components/sticker-component-test.coffee
+file changed integration/components/sticker-component-test.coffee
+
+Build successful - 528ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 164ms               
+Funnel: App JS Files                          | 40ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 164ms               
+SourcemapConcat (3)                           | 45ms (15 ms)        
+Babel (5)                                     | 44ms (8 ms)         
+Funnel: App JS Files (1)                      | 40ms                
+
+file deleted templates/components/sticker-component.hbs
+file added templates/components/sticker-component.emblem
+File: frontend/templates/components/sticker-component.emblem (1)
+Expected _4BeginStatement or end of input but "{" found.
+file added templates/components/smiles-component.emblem___jb_old___
+file changed templates/components/smiles-component.emblem
+file deleted templates/components/smiles-component.emblem___jb_old___
+file added templates/components/sticker-component.emblem___jb_old___
+file changed templates/components/sticker-component.emblem
+file deleted templates/components/sticker-component.emblem___jb_old___
+
+Build successful - 525ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 170ms               
+Funnel: App JS Files                          | 41ms                
+SourcemapConcat                               | 35ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 170ms               
+SourcemapConcat (3)                           | 57ms (19 ms)        
+Funnel: App JS Files (1)                      | 41ms                
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 513ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 168ms               
+Funnel: App JS Files                          | 40ms                
+TreeMerger (appAndDependencies)               | 28ms                
+Concat: Test Support JS                       | 26ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 168ms               
+SourcemapConcat (3)                           | 45ms (15 ms)        
+Funnel: App JS Files (1)                      | 40ms                
+TreeMerger (appAndDependencies) (1)           | 28ms                
+Concat: Test Support JS (1)                   | 26ms                
+
+file changed templates/components/sticker-component.emblem
+
+Build successful - 501ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 117ms               
+Funnel: App JS Files                          | 86ms                
+TreeMerger (appAndDependencies)               | 29ms                
+Concat: Test Support JS                       | 26ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 117ms               
+Funnel: App JS Files (1)                      | 86ms                
+SourcemapConcat (3)                           | 44ms (14 ms)        
+TreeMerger (appAndDependencies) (1)           | 29ms                
+Concat: Test Support JS (1)                   | 26ms                
+
+file changed components/smiles-component.coffee
+
+Build successful - 548ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 121ms               
+Funnel: App JS Files                          | 85ms                
+Concat: Test Support JS                       | 32ms                
+TreeMerger (appAndDependencies)               | 30ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 121ms               
+Funnel: App JS Files (1)                      | 85ms                
+SourcemapConcat (3)                           | 51ms (17 ms)        
+Concat: Test Support JS (1)                   | 32ms                
+TreeMerger (appAndDependencies) (1)           | 30ms                
+
+file changed components/smiles-component.coffee
+file added components/sticker-component.coffee___jb_bak___
+file deleted components/sticker-component.coffee___jb_bak___
+file added components/sticker-component.coffee___jb_old___
+file changed components/sticker-component.coffee
+file deleted components/sticker-component.coffee___jb_old___
+
+Build successful - 556ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 122ms               
+Funnel: App JS Files                          | 90ms                
+Babel                                         | 35ms                
+Concat: Test Support JS                       | 28ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 122ms               
+Funnel: App JS Files (1)                      | 90ms                
+Babel (5)                                     | 49ms (9 ms)         
+SourcemapConcat (3)                           | 48ms (16 ms)        
+CoffeeScriptFilter (2)                        | 29ms (14 ms)        
+Concat: Test Support JS (1)                   | 28ms                
+
+file changed templates/components/smiles-component.emblem
+
+Build successful - 553ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 124ms               
+Funnel: App JS Files                          | 94ms                
+TreeMerger (appAndDependencies)               | 34ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 124ms               
+Funnel: App JS Files (1)                      | 94ms                
+SourcemapConcat (3)                           | 47ms (15 ms)        
+TreeMerger (appAndDependencies) (1)           | 34ms                
+TemplateCompiler (2)                          | 29ms (14 ms)        
+Babel (5)                                     | 27ms (5 ms)         
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed components/smiles-component.coffee
+file changed templates/components/smiles-component.emblem
+
+Build successful - 533ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 119ms               
+Funnel: App JS Files                          | 96ms                
+TreeMerger (appAndDependencies)               | 28ms                
+Concat: Test Support JS                       | 26ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 119ms               
+Funnel: App JS Files (1)                      | 96ms                
+SourcemapConcat (3)                           | 45ms (15 ms)        
+Babel (5)                                     | 30ms (6 ms)         
+TreeMerger (appAndDependencies) (1)           | 28ms                
+Concat: Test Support JS (1)                   | 26ms                
+
+file changed templates/components/smiles-component.emblem
+file added templates/components/sticker-component.emblem___jb_old___
+file changed templates/components/sticker-component.emblem
+file deleted templates/components/sticker-component.emblem___jb_old___
+
+Build successful - 538ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 129ms               
+Funnel: App JS Files                          | 92ms                
+TreeMerger (appAndDependencies)               | 33ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 129ms               
+Funnel: App JS Files (1)                      | 92ms                
+SourcemapConcat (3)                           | 46ms (15 ms)        
+TreeMerger (appAndDependencies) (1)           | 33ms                
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed components/smiles-component.coffee
+
+Build successful - 516ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 130ms               
+Funnel: App JS Files                          | 89ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 130ms               
+Funnel: App JS Files (1)                      | 89ms                
+SourcemapConcat (3)                           | 49ms (16 ms)        
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed components/sticker-component.coffee
+
+Build successful - 547ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 127ms               
+Funnel: App JS Files                          | 85ms                
+Concat: Test Support JS                       | 28ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 127ms               
+Funnel: App JS Files (1)                      | 85ms                
+SourcemapConcat (3)                           | 50ms (16 ms)        
+Babel (5)                                     | 35ms (7 ms)         
+Concat: Test Support JS (1)                   | 28ms                
+
+file changed components/sticker-component.coffee
+
+Build successful - 592ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 128ms               
+Funnel: App JS Files                          | 90ms                
+SourcemapConcat                               | 38ms                
+Concat: App                                   | 36ms                
+Babel                                         | 34ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 128ms               
+Funnel: App JS Files (1)                      | 90ms                
+SourcemapConcat (3)                           | 63ms (21 ms)        
+Babel (5)                                     | 48ms (9 ms)         
+Concat: App (1)                               | 36ms                
+
+file changed components/sticker-component.coffee
+
+Build successful - 820ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 206ms               
+Funnel: App JS Files                          | 141ms               
+TreeMerger (appAndDependencies)               | 46ms                
+Concat: Test Support JS                       | 44ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 206ms               
+Funnel: App JS Files (1)                      | 141ms               
+SourcemapConcat (3)                           | 76ms (25 ms)        
+TreeMerger (appAndDependencies) (1)           | 46ms                
+Concat: Test Support JS (1)                   | 44ms                
+Babel (5)                                     | 44ms (8 ms)         
+
+file changed components/sticker-component.coffee
+
+Build successful - 557ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 128ms               
+Funnel: App JS Files                          | 92ms                
+SourcemapConcat                               | 38ms                
+Concat: Test Support JS                       | 33ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 128ms               
+Funnel: App JS Files (1)                      | 92ms                
+SourcemapConcat (3)                           | 63ms (21 ms)        
+Concat: Test Support JS (1)                   | 33ms                
+Babel (5)                                     | 30ms (6 ms)         
+
+file changed components/sticker-component.coffee
+
+Build successful - 812ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 199ms               
+Funnel: App JS Files                          | 147ms               
+Concat: Test Support JS                       | 42ms                
+TreeMerger (appAndDependencies)               | 40ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 199ms               
+Funnel: App JS Files (1)                      | 147ms               
+SourcemapConcat (3)                           | 75ms (25 ms)        
+Babel (5)                                     | 46ms (9 ms)         
+Concat: Test Support JS (1)                   | 42ms                
+TreeMerger (appAndDependencies) (1)           | 40ms                
+
+file changed components/sticker-component.coffee
+
+Build successful - 554ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 129ms               
+Funnel: App JS Files                          | 92ms                
+Concat: Test Support JS                       | 29ms                
+TreeMerger (appAndDependencies)               | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 129ms               
+Funnel: App JS Files (1)                      | 92ms                
+SourcemapConcat (3)                           | 48ms (16 ms)        
+Babel (5)                                     | 30ms (6 ms)         
+Concat: Test Support JS (1)                   | 29ms                
+TreeMerger (appAndDependencies) (1)           | 27ms                
+
+file changed components/sticker-component.coffee
+
+Build successful - 556ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 125ms               
+Funnel: App JS Files                          | 92ms                
+Concat: Test Support JS                       | 35ms                
+SourcemapConcat                               | 29ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 125ms               
+Funnel: App JS Files (1)                      | 92ms                
+SourcemapConcat (3)                           | 57ms (19 ms)        
+Concat: Test Support JS (1)                   | 35ms                
+Babel (5)                                     | 31ms (6 ms)         
+
+file changed components/smiles-component.coffee
+
+Build successful - 578ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 177ms               
+Babel                                         | 40ms                
+Funnel: App JS Files                          | 39ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 177ms               
+Babel (5)                                     | 60ms (12 ms)        
+SourcemapConcat (3)                           | 45ms (15 ms)        
+Funnel: App JS Files (1)                      | 39ms                
+CoffeeScriptFilter (2)                        | 29ms (14 ms)        
+
+file changed components/smiles-component.coffee
+
+Build successful - 744ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 203ms               
+Funnel: App JS Files                          | 151ms               
+TreeMerger (appAndDependencies)               | 38ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 203ms               
+Funnel: App JS Files (1)                      | 151ms               
+SourcemapConcat (3)                           | 60ms (20 ms)        
+Babel (5)                                     | 43ms (8 ms)         
+TreeMerger (appAndDependencies) (1)           | 38ms                
+
+file changed templates/components/message-input.emblem
+
+Build successful - 549ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 127ms               
+Funnel: App JS Files                          | 97ms                
+TreeMerger (appAndDependencies)               | 30ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 127ms               
+Funnel: App JS Files (1)                      | 97ms                
+SourcemapConcat (3)                           | 45ms (15 ms)        
+TreeMerger (appAndDependencies) (1)           | 30ms                
+
+file changed templates/application.emblem
+
+Build successful - 553ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 127ms               
+Funnel: App JS Files                          | 101ms               
+TreeMerger (appAndDependencies)               | 32ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 127ms               
+Funnel: App JS Files (1)                      | 101ms               
+SourcemapConcat (3)                           | 45ms (15 ms)        
+TreeMerger (appAndDependencies) (1)           | 32ms                
+

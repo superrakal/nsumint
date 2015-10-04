@@ -5,5 +5,5 @@ section#chat.animated
       |Собеседник набирает сообщение ...
     .message-input
       form{action 'sendMessage' on='submit'}
-        message-input value=message disabled=controllers.application.isChatting model=controller.model
+        message-input value=message disabled=controllers.application.isChatting model=controller.model stickers=controller.stickers
 

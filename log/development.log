@@ -3481,3 +3481,1654 @@ Processing by Api::V1::FacultiesController#index as JSON
   MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3524ms
   MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3068ms
 Completed 200 OK in 3ms (Views: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:11:58 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (9.3ms)
+Completed 200 OK in 449ms (Views: 449.3ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2015-10-04 22:12:05 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>nil, "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}}
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6714ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=users documents=[{"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000'), "status"=>"created", "nickname"=>nil, "my_sex"=>nil, "user_sex"=>nil, "my_faculty_id"=>nil, "socket_id"=>nil, "user_socket_id"=>nil, "updated_at"=>2015-10-04 16:12:05 UTC, "created_at"=>2015-10-04 16:12:05 UTC}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 44.7123ms
+Completed 201 Created in 60ms (Views: 1.7ms)
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-04 22:12:06 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3564ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6251ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3903ms
+Completed 200 OK in 9ms (Views: 6.9ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:12:06 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"6jsDjOTU5w6vwQf1AAZE", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2809ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"6jsDjOTU5w6vwQf1AAZE", "updated_at"=>2015-10-04 16:12:06 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3102ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:12:51 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>nil, "status"=>"created", "socket_id"=>"6jsDjOTU5w6vwQf1AAZE", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>nil}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4387ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3731ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"my_sex"=>"male", "my_faculty_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "updated_at"=>2015-10-04 16:12:51 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4632ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-04 22:12:51 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2372ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2272ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1690ms
+Completed 200 OK in 4ms (Views: 1.8ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:12:53 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"created", "socket_id"=>"6jsDjOTU5w6vwQf1AAZE", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4535ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"user_sex"=>"all", "updated_at"=>2015-10-04 16:12:53 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 1.7860ms
+Completed 204 No Content in 9ms
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:12:53 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"searching", "socket_id"=>"6jsDjOTU5w6vwQf1AAZE", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3994ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2301ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"status"=>"searching", "updated_at"=>2015-10-04 16:12:53 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3731ms
+Completed 204 No Content in 6ms
+
+
+Started POST "/api/v1/users/search_user" for 127.0.0.1 at 2015-10-04 22:12:53 +0600
+Processing by Api::V1::UsersController#search_user as */*
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3126ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"status"=>"searching"} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3057ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2329ms
+Completed 205 Reset Content in 4ms (Views: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:12:55 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 208ms (Views: 207.7ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2015-10-04 22:12:56 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>nil, "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}}
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2933ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=users documents=[{"_id"=>BSON::ObjectId('56115008d3054d0b83000003'), "status"=>"created", "nickname"=>nil, "my_sex"=>nil, "user_sex"=>nil, "my_faculty_id"=>nil, "socket_id"=>nil, "user_socket_id"=>nil, "updated_at"=>2015-10-04 16:12:56 UTC, "created_at"=>2015-10-04 16:12:56 UTC}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2780ms
+Completed 201 Created in 5ms (Views: 0.5ms)
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-04 22:12:56 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4277ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2918ms
+Completed 200 OK in 4ms (Views: 1.8ms)
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:12:56 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3617ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "updated_at"=>2015-10-04 16:12:56 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3939ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:12:58 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>nil, "status"=>"created", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>nil}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3138ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"my_sex"=>"male", "my_faculty_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "updated_at"=>2015-10-04 16:12:58 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4506ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-04 22:12:58 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3092ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2241ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1478ms
+Completed 200 OK in 4ms (Views: 1.8ms)
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:13:00 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"created", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.4346ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_sex"=>"all", "updated_at"=>2015-10-04 16:13:00 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 2.3506ms
+Completed 204 No Content in 9ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:13:00 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"searching", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2568ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2184ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"status"=>"searching", "updated_at"=>2015-10-04 16:13:00 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4392ms
+Completed 204 No Content in 6ms
+
+
+Started POST "/api/v1/users/search_user" for 127.0.0.1 at 2015-10-04 22:13:00 +0600
+Processing by Api::V1::UsersController#search_user as */*
+  Parameters: {"id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3240ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"status"=>"searching"} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2799ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1936ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1585ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1340ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"status"=>"chatting", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "updated_at"=>2015-10-04 16:13:00 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 2.5311ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"status"=>"chatting", "user_socket_id"=>"6jsDjOTU5w6vwQf1AAZE", "updated_at"=>2015-10-04 16:13:00 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3068ms
+Completed 200 OK in 8ms (Views: 0.6ms)
+
+
+Started GET "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:13:00 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3369ms
+Completed 200 OK in 3ms (Views: 0.7ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:13:01 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3443ms
+Completed 200 OK in 3ms (Views: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:13:40 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (8.7ms)
+Completed 200 OK in 1613ms (Views: 1612.5ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:13:48 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7317ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2537ms
+Completed 200 OK in 21ms (Views: 6.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:13:48 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"6jsDjOTU5w6vwQf1AAZE", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4101ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:13:48 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4458ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:13:48 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2961ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2120ms
+Completed 200 OK in 4ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:13:48 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"10V-zIxG5DsMcDHnAAZJ", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4258ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"10V-zIxG5DsMcDHnAAZJ", "updated_at"=>2015-10-04 16:13:48 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4230ms
+Completed 204 No Content in 6ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:13:48 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"10V-zIxG5DsMcDHnAAZJ", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5155ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4797ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"10V-zIxG5DsMcDHnAAZJ", "updated_at"=>2015-10-04 16:13:48 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5853ms
+Completed 204 No Content in 10ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:14:02 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 274ms (Views: 274.1ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:14:03 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3133ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3359ms
+Completed 200 OK in 5ms (Views: 0.9ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:14:03 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"10V-zIxG5DsMcDHnAAZJ", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3345ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:14:03 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3731ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:14:03 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2949ms
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:14:03 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"RA6bAdkVbFjeVvaNAAZM", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4466ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"RA6bAdkVbFjeVvaNAAZM", "updated_at"=>2015-10-04 16:14:03 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.6320ms
+Completed 204 No Content in 8ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:14:03 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"RA6bAdkVbFjeVvaNAAZM", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3924ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"RA6bAdkVbFjeVvaNAAZM", "updated_at"=>2015-10-04 16:14:03 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3905ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:16:17 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 283ms (Views: 282.8ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:16:18 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2854ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2382ms
+Completed 200 OK in 4ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:16:18 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"RA6bAdkVbFjeVvaNAAZM", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3507ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:16:18 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3676ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:16:18 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3424ms
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:16:19 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"X81JBLu50Yq7qjAKAAZP", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3355ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"X81JBLu50Yq7qjAKAAZP", "updated_at"=>2015-10-04 16:16:19 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2861ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:16:19 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"X81JBLu50Yq7qjAKAAZP", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3231ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2770ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"X81JBLu50Yq7qjAKAAZP", "updated_at"=>2015-10-04 16:16:19 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4170ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:17:34 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 254ms (Views: 253.7ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:17:34 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4125ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3715ms
+Completed 200 OK in 6ms (Views: 1.0ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:17:35 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"X81JBLu50Yq7qjAKAAZP", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3932ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:17:35 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4478ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:17:35 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4082ms
+Completed 200 OK in 5ms (Views: 1.0ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:17:35 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"AupbRyYvNmCEjJ-vAAZW", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3090ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"AupbRyYvNmCEjJ-vAAZW", "updated_at"=>2015-10-04 16:17:35 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3698ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:17:35 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"AupbRyYvNmCEjJ-vAAZW", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2847ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2306ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"AupbRyYvNmCEjJ-vAAZW", "updated_at"=>2015-10-04 16:17:35 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2813ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:18:06 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 272ms (Views: 272.3ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:18:07 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2880ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2413ms
+Completed 200 OK in 4ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:18:07 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"AupbRyYvNmCEjJ-vAAZW", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5288ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:18:07 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4985ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:18:07 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4148ms
+Completed 200 OK in 5ms (Views: 1.4ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:18:07 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"c-VvxHJcAuyY3oQZAAZY", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4499ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"c-VvxHJcAuyY3oQZAAZY", "updated_at"=>2015-10-04 16:18:07 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5040ms
+Completed 204 No Content in 7ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:18:08 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"c-VvxHJcAuyY3oQZAAZY", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4513ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2329ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"c-VvxHJcAuyY3oQZAAZY", "updated_at"=>2015-10-04 16:18:08 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2861ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:19:36 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 275ms (Views: 274.4ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:19:37 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3271ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2596ms
+Completed 200 OK in 4ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:19:37 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"c-VvxHJcAuyY3oQZAAZY", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3858ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:19:37 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3419ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:19:37 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2518ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2475ms
+Completed 200 OK in 4ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:19:38 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"3oQ6Y5UXF4x6kxiKAAZa", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3161ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"3oQ6Y5UXF4x6kxiKAAZa", "updated_at"=>2015-10-04 16:19:38 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3610ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:19:38 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"3oQ6Y5UXF4x6kxiKAAZa", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3366ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2427ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"3oQ6Y5UXF4x6kxiKAAZa", "updated_at"=>2015-10-04 16:19:38 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3033ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:24:58 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 222ms (Views: 221.7ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:24:59 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3023ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2077ms
+Completed 200 OK in 4ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:24:59 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"3oQ6Y5UXF4x6kxiKAAZa", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3588ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:24:59 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4005ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:24:59 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2306ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2403ms
+Completed 200 OK in 3ms (Views: 0.5ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:24:59 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"5PNjrpzMp8P-zSJBAAZg", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3583ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"5PNjrpzMp8P-zSJBAAZg", "updated_at"=>2015-10-04 16:24:59 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3946ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:24:59 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"5PNjrpzMp8P-zSJBAAZg", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3090ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2770ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"5PNjrpzMp8P-zSJBAAZg", "updated_at"=>2015-10-04 16:24:59 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5305ms
+Completed 204 No Content in 13ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:25:21 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 226ms (Views: 226.0ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:25:22 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4048ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4265ms
+Completed 200 OK in 5ms (Views: 0.8ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:25:22 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"5PNjrpzMp8P-zSJBAAZg", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4492ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:25:22 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4530ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:25:22 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2971ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2522ms
+Completed 200 OK in 4ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:25:22 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"TkWyyCp3LxKaYrIxAAZh", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3119ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"TkWyyCp3LxKaYrIxAAZh", "updated_at"=>2015-10-04 16:25:22 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3548ms
+Completed 204 No Content in 6ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:25:23 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"TkWyyCp3LxKaYrIxAAZh", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3560ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"TkWyyCp3LxKaYrIxAAZh", "updated_at"=>2015-10-04 16:25:23 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3917ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:25:31 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 236ms (Views: 235.7ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:25:32 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4373ms
+Completed 200 OK in 5ms (Views: 1.1ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:25:32 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"TkWyyCp3LxKaYrIxAAZh", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4735ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:25:32 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.6101ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:25:32 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4079ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2623ms
+Completed 200 OK in 6ms (Views: 1.2ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:25:32 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"vL1hSrDWoJxOQVqJAAZi", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3910ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"vL1hSrDWoJxOQVqJAAZi", "updated_at"=>2015-10-04 16:25:32 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5114ms
+Completed 204 No Content in 14ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:25:33 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"vL1hSrDWoJxOQVqJAAZi", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4466ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"vL1hSrDWoJxOQVqJAAZi", "updated_at"=>2015-10-04 16:25:33 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5531ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:35:14 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (9.3ms)
+Completed 200 OK in 485ms (Views: 484.3ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:35:21 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.0145ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4208ms
+Completed 200 OK in 34ms (Views: 9.8ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:35:21 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"vL1hSrDWoJxOQVqJAAZi", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3021ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1981ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:35:21 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4051ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:35:21 +0600
+
+ActionController::RoutingError (No route matches [GET] "/api/v1/stickers"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:38:39 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (9.2ms)
+Completed 200 OK in 658ms (Views: 657.5ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:38:46 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9003ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2611ms
+Completed 200 OK in 23ms (Views: 6.0ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:38:46 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"vL1hSrDWoJxOQVqJAAZi", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3529ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3068ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:38:46 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4442ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:38:46 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3190ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2122ms
+Completed 200 OK in 9ms (Views: 1.4ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:38:46 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4299ms
+Completed 200 OK in 5ms (Views: 1.1ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:38:46 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"qZ4cOIyxnxTi4GMYAAZz", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2918ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"qZ4cOIyxnxTi4GMYAAZz", "updated_at"=>2015-10-04 16:38:46 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2904ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:38:47 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"qZ4cOIyxnxTi4GMYAAZz", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3803ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2224ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"qZ4cOIyxnxTi4GMYAAZz", "updated_at"=>2015-10-04 16:38:47 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4542ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-10-04 22:39:03 +0600
+Processing by RailsAdmin::MainController#dashboard as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=nsumint_development command={:count=>"faculties", :query=>{}} runtime: 0.2856ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=nsumint_development command={:count=>"images", :query=>{}} runtime: 0.1349ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=images selector={"$query"=>{}, "$orderby"=>{"updated_at"=>-1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1945ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=nsumint_development command={:count=>"stickers", :query=>{}} runtime: 0.1910ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={"$query"=>{}, "$orderby"=>{"updated_at"=>-1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1829ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=nsumint_development command={:count=>"users", :query=>{}} runtime: 0.1314ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"$query"=>{}, "$orderby"=>{"updated_at"=>-1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2940ms
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (11.4ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.6ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/layouts/rails_admin/_navigation.html.haml (4.8ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.6ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/layouts/rails_admin/pjax.html.haml (2.1ms)
+Completed 200 OK in 3497ms (Views: 3389.7ms)
+
+
+Started GET "/admin/image?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2015-10-04 22:39:08 +0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"image"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4418ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=images selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 2.4536ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=nsumint_development command={:count=>"images", :query=>{}} runtime: 0.2573ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=images selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.1791ms
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (20.6ms)
+Completed 200 OK in 32ms (Views: 26.1ms)
+
+
+Started GET "/admin/image?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2015-10-04 22:39:08 +0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"image"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=images selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.2859ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=nsumint_development command={:count=>"images", :query=>{}} runtime: 0.2172ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=images selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.1495ms
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (6.9ms)
+Completed 200 OK in 16ms (Views: 11.5ms)
+
+
+Started GET "/admin/sticker?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2015-10-04 22:39:10 +0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"sticker"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.2975ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=nsumint_development command={:count=>"stickers", :query=>{}} runtime: 0.2210ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.3004ms
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (8.8ms)
+Completed 200 OK in 21ms (Views: 13.4ms)
+
+
+Started GET "/admin/sticker?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2015-10-04 22:39:10 +0600
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"sticker"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.3648ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=nsumint_development command={:count=>"stickers", :query=>{}} runtime: 0.3164ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={"$query"=>{}, "$orderby"=>{"_id"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.3028ms
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (7.9ms)
+Completed 200 OK in 15ms (Views: 12.1ms)
+
+
+Started GET "/admin/sticker/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2015-10-04 22:39:11 +0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"sticker"}
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/_form_file_upload.html.haml (3.2ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/_submit_buttons.html.haml (2.5ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (12.7ms)
+Completed 200 OK in 26ms (Views: 22.0ms)
+
+
+Started GET "/admin/sticker/new?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2015-10-04 22:39:11 +0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"sticker"}
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/_form_file_upload.html.haml (0.4ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/_submit_buttons.html.haml (1.0ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (4.9ms)
+Completed 200 OK in 13ms (Views: 10.1ms)
+
+
+Started POST "/admin/sticker/new" for 127.0.0.1 at 2015-10-04 22:39:20 +0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ytsSyy8eymYRapQ+d3V0fRjwdAMC1l/BEZ1jXY1xpvFhqmxFYHnt9xYgYHCLG2U3FWvEXqcltDWOfSGvmKVTFQ==", "sticker"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007f6bb17cf398 @tempfile=#<Tempfile:/tmp/RackMultipart20151004-4767-prnixs.jpg>, @original_filename="ClsndZmjIVY.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"sticker[image]\"; filename=\"ClsndZmjIVY.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "return_to"=>"http://localhost:3000/admin/sticker/new", "_save"=>"", "model_name"=>"sticker"}
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=stickers documents=[{"_id"=>BSON::ObjectId('56115639d3054d129f000003'), "image_file_name"=>"ClsndZmjIVY.jpg", "image_content_type"=>"image/jpeg", "image_file_size"=>30344, "image_fingerprint"=>"6bae56e17423432b360348ea9a2443bc", "image_updated_at"=>2015-10-04 16:39:20 UTC, "updated_at"=>2015-10-04 16:39:21 UTC, "created_at"=>2015-10-04 16:39:21 UTC}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 1.2090ms
+Redirected to http://localhost:3000/admin/sticker/new
+Completed 302 Found in 156ms
+
+
+Started GET "/admin/sticker/new" for 127.0.0.1 at 2015-10-04 22:39:21 +0600
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"model_name"=>"sticker"}
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/_form_file_upload.html.haml (0.4ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/_submit_buttons.html.haml (0.9ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/application (4.4ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/layouts/rails_admin/_secondary_navigation.html.haml (0.7ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/layouts/rails_admin/_navigation.html.haml (2.6ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.1ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/rails_admin-0.6.8/app/views/layouts/rails_admin/pjax.html.haml (3.1ms)
+Completed 200 OK in 229ms (Views: 226.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:39:32 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 215ms (Views: 215.1ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:39:33 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3648ms
+Completed 200 OK in 4ms (Views: 0.8ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:39:33 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"qZ4cOIyxnxTi4GMYAAZz", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3991ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:39:33 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4566ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:39:33 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2866ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2024ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2165ms
+Completed 200 OK in 5ms (Views: 3.5ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:39:33 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3092ms
+Completed 200 OK in 3ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:39:34 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"pWFNq4oG_QXTaIIHAAZ0", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3057ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"pWFNq4oG_QXTaIIHAAZ0", "updated_at"=>2015-10-04 16:39:34 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3607ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:39:34 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"pWFNq4oG_QXTaIIHAAZ0", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5555ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2751ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"pWFNq4oG_QXTaIIHAAZ0", "updated_at"=>2015-10-04 16:39:34 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3309ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:40:20 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 237ms (Views: 236.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:40:20 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 226ms (Views: 225.5ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:40:21 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3788ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2775ms
+Completed 200 OK in 5ms (Views: 0.9ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:40:21 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"pWFNq4oG_QXTaIIHAAZ0", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4005ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:40:21 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5319ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:40:21 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4494ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3467ms
+Completed 200 OK in 7ms (Views: 3.9ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:40:21 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3583ms
+Completed 200 OK in 4ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:40:22 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"lGzi3tTe1Xy2-w1KAAZ1", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3099ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"lGzi3tTe1Xy2-w1KAAZ1", "updated_at"=>2015-10-04 16:40:22 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3562ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:40:22 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"lGzi3tTe1Xy2-w1KAAZ1", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3538ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3080ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"lGzi3tTe1Xy2-w1KAAZ1", "updated_at"=>2015-10-04 16:40:22 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4866ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:52:52 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 271ms (Views: 271.0ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:52:53 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2837ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2708ms
+Completed 200 OK in 4ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:52:53 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"lGzi3tTe1Xy2-w1KAAZ1", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3436ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:52:53 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3250ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:52:53 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2687ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2277ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2053ms
+Completed 200 OK in 5ms (Views: 2.8ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:52:53 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3209ms
+Completed 200 OK in 4ms (Views: 0.8ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:52:53 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"LCLpjDzvZiu9w6DgAAZ-", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3548ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"LCLpjDzvZiu9w6DgAAZ-", "updated_at"=>2015-10-04 16:52:53 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4051ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:52:54 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"LCLpjDzvZiu9w6DgAAZ-", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4420ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3779ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"LCLpjDzvZiu9w6DgAAZ-", "updated_at"=>2015-10-04 16:52:54 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4430ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:53:12 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 252ms (Views: 252.0ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:13 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3624ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3364ms
+Completed 200 OK in 6ms (Views: 1.1ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:13 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"LCLpjDzvZiu9w6DgAAZ-", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3741ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:53:13 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.6285ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:53:13 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3135ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2122ms
+Completed 200 OK in 4ms (Views: 2.2ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:13 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.9263ms
+Completed 200 OK in 4ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:14 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"ty6d3ekhyGNL72rcAAZ_", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3057ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"ty6d3ekhyGNL72rcAAZ_", "updated_at"=>2015-10-04 16:53:14 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4244ms
+Completed 204 No Content in 6ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:53:14 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"ty6d3ekhyGNL72rcAAZ_", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3319ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"ty6d3ekhyGNL72rcAAZ_", "updated_at"=>2015-10-04 16:53:14 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.7031ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:53:28 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 250ms (Views: 250.1ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:28 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4694ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3636ms
+Completed 200 OK in 5ms (Views: 0.9ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:29 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"ty6d3ekhyGNL72rcAAZ_", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4430ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:53:29 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4327ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:53:29 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3378ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2081ms
+Completed 200 OK in 4ms (Views: 2.2ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:29 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3805ms
+Completed 200 OK in 4ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:29 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"y186Zau8VkLvw_x0AAaB", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3302ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"y186Zau8VkLvw_x0AAaB", "updated_at"=>2015-10-04 16:53:29 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3135ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:53:29 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"y186Zau8VkLvw_x0AAaB", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3834ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"y186Zau8VkLvw_x0AAaB", "updated_at"=>2015-10-04 16:53:29 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.9174ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:53:46 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 354ms (Views: 354.0ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:47 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4120ms
+Completed 200 OK in 4ms (Views: 0.9ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:47 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"y186Zau8VkLvw_x0AAaB", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4051ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:53:47 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3958ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:53:47 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3209ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2072ms
+Completed 200 OK in 4ms (Views: 2.1ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:47 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3150ms
+Completed 200 OK in 3ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:53:48 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"ERR2NlYdiZNyKLwSAAaC", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4165ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"ERR2NlYdiZNyKLwSAAaC", "updated_at"=>2015-10-04 16:53:48 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5870ms
+Completed 204 No Content in 8ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:53:49 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"ERR2NlYdiZNyKLwSAAaC", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5367ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"ERR2NlYdiZNyKLwSAAaC", "updated_at"=>2015-10-04 16:53:49 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.6347ms
+Completed 204 No Content in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:54:04 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 229ms (Views: 228.7ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:54:05 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.5185ms
+Completed 200 OK in 5ms (Views: 0.8ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:54:05 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"ERR2NlYdiZNyKLwSAAaC", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2849ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:54:05 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3121ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:54:05 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3383ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2010ms
+Completed 200 OK in 4ms (Views: 2.2ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:54:05 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2780ms
+Completed 200 OK in 3ms (Views: 0.9ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:54:07 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"GqtXLPUlleTvf75lAAaD", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6652ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"GqtXLPUlleTvf75lAAaD", "updated_at"=>2015-10-04 16:54:07 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4072ms
+Completed 204 No Content in 7ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:54:07 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"GqtXLPUlleTvf75lAAaD", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5200ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"GqtXLPUlleTvf75lAAaD", "updated_at"=>2015-10-04 16:54:07 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5698ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:54:37 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 279ms (Views: 279.3ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:54:38 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3240ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2258ms
+Completed 200 OK in 11ms (Views: 0.8ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:54:38 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"GqtXLPUlleTvf75lAAaD", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3431ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:54:38 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3483ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:54:38 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3517ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2363ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2217ms
+Completed 200 OK in 5ms (Views: 3.3ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:54:38 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3533ms
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:54:39 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"rPkmEShx-y1D_A1IAAaE", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5186ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"rPkmEShx-y1D_A1IAAaE", "updated_at"=>2015-10-04 16:54:39 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2987ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:54:39 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"rPkmEShx-y1D_A1IAAaE", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3705ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2427ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"rPkmEShx-y1D_A1IAAaE", "updated_at"=>2015-10-04 16:54:39 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2952ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:55:19 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 225ms (Views: 224.7ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:20 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3788ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3355ms
+Completed 200 OK in 6ms (Views: 1.1ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:20 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"rPkmEShx-y1D_A1IAAaE", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.1063ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:55:20 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.6948ms
+Completed 204 No Content in 11ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:55:20 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3314ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2775ms
+Completed 200 OK in 5ms (Views: 2.6ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:20 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2973ms
+Completed 200 OK in 3ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:21 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"g3K-unhgsgdLZNecAAaF", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3657ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"g3K-unhgsgdLZNecAAaF", "updated_at"=>2015-10-04 16:55:21 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4587ms
+Completed 204 No Content in 6ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:55:21 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"g3K-unhgsgdLZNecAAaF", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3023ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3188ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"g3K-unhgsgdLZNecAAaF", "updated_at"=>2015-10-04 16:55:21 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3927ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:55:27 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 209ms (Views: 209.2ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:28 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4215ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3214ms
+Completed 200 OK in 4ms (Views: 0.8ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:28 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"g3K-unhgsgdLZNecAAaF", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3498ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:55:28 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3631ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:55:28 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2759ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2537ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2105ms
+Completed 200 OK in 5ms (Views: 2.9ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:28 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3583ms
+Completed 200 OK in 4ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:29 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"oUyDB9RDiBb89NYPAAaH", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3870ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"oUyDB9RDiBb89NYPAAaH", "updated_at"=>2015-10-04 16:55:29 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3905ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:55:29 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"oUyDB9RDiBb89NYPAAaH", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3738ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"oUyDB9RDiBb89NYPAAaH", "updated_at"=>2015-10-04 16:55:29 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3400ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:55:53 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.2ms)
+Completed 200 OK in 317ms (Views: 316.6ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:54 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2904ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2501ms
+Completed 200 OK in 7ms (Views: 1.3ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:54 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"oUyDB9RDiBb89NYPAAaH", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3858ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:55:54 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3991ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:55:54 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3226ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1991ms
+Completed 200 OK in 5ms (Views: 2.5ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:54 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4058ms
+Completed 200 OK in 6ms (Views: 1.8ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:55:55 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"qJDGuCgvEpbsfaf3AAaJ", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4072ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"qJDGuCgvEpbsfaf3AAaJ", "updated_at"=>2015-10-04 16:55:55 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4084ms
+Completed 204 No Content in 6ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:55:55 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"qJDGuCgvEpbsfaf3AAaJ", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4396ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"qJDGuCgvEpbsfaf3AAaJ", "updated_at"=>2015-10-04 16:55:55 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.6428ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:56:05 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 458ms (Views: 457.5ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:56:06 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3920ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4244ms
+Completed 200 OK in 6ms (Views: 1.1ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:56:06 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"qJDGuCgvEpbsfaf3AAaJ", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3424ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:56:06 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4601ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:56:06 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3660ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2348ms
+Completed 200 OK in 5ms (Views: 2.4ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:56:06 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3889ms
+Completed 200 OK in 5ms (Views: 1.2ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:56:07 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"sYd81GAcqomtQ9k6AAaK", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3145ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"sYd81GAcqomtQ9k6AAaK", "updated_at"=>2015-10-04 16:56:07 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3009ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:56:07 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"sYd81GAcqomtQ9k6AAaK", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3498ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"sYd81GAcqomtQ9k6AAaK", "updated_at"=>2015-10-04 16:56:07 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4296ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:56:36 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 260ms (Views: 259.5ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:56:37 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4463ms
+Completed 200 OK in 6ms (Views: 1.3ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:56:37 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"sYd81GAcqomtQ9k6AAaK", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4258ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:56:37 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.6034ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:56:37 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3254ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2592ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2747ms
+Completed 200 OK in 6ms (Views: 4.1ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:56:37 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3941ms
+Completed 200 OK in 5ms (Views: 0.9ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:56:37 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"kCod_7uTyiTZps5zAAaM", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3195ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"kCod_7uTyiTZps5zAAaM", "updated_at"=>2015-10-04 16:56:37 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4394ms
+Completed 204 No Content in 6ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:56:37 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"kCod_7uTyiTZps5zAAaM", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3974ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3502ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"kCod_7uTyiTZps5zAAaM", "updated_at"=>2015-10-04 16:56:37 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4523ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 22:58:07 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 221ms (Views: 220.5ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:58:08 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3383ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3269ms
+Completed 200 OK in 4ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:58:08 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"kCod_7uTyiTZps5zAAaM", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4091ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"updated_at"=>2015-10-04 16:58:08 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4270ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-04 22:58:08 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2732ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2067ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1707ms
+Completed 200 OK in 4ms (Views: 2.4ms)
+
+
+Started GET "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:58:08 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3438ms
+Completed 200 OK in 3ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56114fd5d3054d0b83000000" for 127.0.0.1 at 2015-10-04 22:58:08 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"6H3eTZdcCoWsAyBqAAaT", "user_socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56114fd5d3054d0b83000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2820ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56114fd5d3054d0b83000000')} update={"$set"=>{"socket_id"=>"6H3eTZdcCoWsAyBqAAaT", "updated_at"=>2015-10-04 16:58:08 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5550ms
+Completed 204 No Content in 6ms
+
+
+Started PUT "/api/v1/users/56115008d3054d0b83000003" for 127.0.0.1 at 2015-10-04 22:58:08 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"Y8E3VsQLki7-sb6eAAZG", "user_socket_id"=>"6H3eTZdcCoWsAyBqAAaT", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"56115008d3054d0b83000003"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3445ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3514ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56115008d3054d0b83000003')} update={"$set"=>{"user_socket_id"=>"6H3eTZdcCoWsAyBqAAaT", "updated_at"=>2015-10-04 16:58:08 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3412ms
+Completed 204 No Content in 6ms
+
+
+Started POST "/api/v1/images" for 127.0.0.1 at 2015-10-04 22:58:47 +0600
+Processing by Api::V1::ImagesController#create as JSON
+  Parameters: {"image"=>{"image"=>"data:image/jpeg;base64,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", "url"=>nil}}
+Unpermitted parameter: url
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3433ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=images documents=[{"_id"=>BSON::ObjectId('56115ac7d3054d129f00002e'), "image_file_name"=>"data", "image_content_type"=>"image/jpeg", "image_file_size"=>30344, "image_fingerprint"=>"6bae56e17423432b360348ea9a2443bc", "image_updated_at"=>2015-10-04 16:58:47 UTC, "updated_at"=>2015-10-04 16:58:47 UTC, "created_at"=>2015-10-04 16:58:47 UTC}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3285ms
+Completed 201 Created in 124ms (Views: 2.2ms)
+
+
+Started GET "/api/v1/images/56115ac7d3054d129f00002e" for 127.0.0.1 at 2015-10-04 22:58:47 +0600
+Processing by Api::V1::ImagesController#show as JSON
+  Parameters: {"id"=>"56115ac7d3054d129f00002e"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=images selector={"_id"=>BSON::ObjectId('56115ac7d3054d129f00002e')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4144ms
+Completed 200 OK in 4ms (Views: 1.3ms)
+
+
+Started DELETE "/api/v1/images/56115ac7d3054d129f00002e" for 127.0.0.1 at 2015-10-04 22:58:57 +0600
+Processing by Api::V1::ImagesController#destroy as JSON
+  Parameters: {"id"=>"56115ac7d3054d129f00002e"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=images selector={"_id"=>BSON::ObjectId('56115ac7d3054d129f00002e')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.8030ms
+  MOPED: 127.0.0.1:27017 DELETE       database=nsumint_development collection=images selector={"_id"=>BSON::ObjectId('56115ac7d3054d129f00002e')} flags=[:remove_first]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.8104ms
+Completed 204 No Content in 17ms (Views: 4.7ms)

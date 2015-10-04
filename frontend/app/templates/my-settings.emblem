@@ -16,7 +16,3 @@ section#my_settings.animated
       .form-group.text-center.actions
         button.btn.btn-default.text-uppercase#save_my_settings{action 'save'} type="button"  Сохранить настройки
 
-footer.navbar-fixed-bottom
-  p.text-center
-    |Сайт создал &nbsp;
-    a href='http://vk.com/nsu_topolnyak' Егор Топольняк

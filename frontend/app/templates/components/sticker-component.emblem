@@ -1,0 +1,1 @@
+img.img-thumbnail{action 'chooseSticker' sticker.url} src=sticker.url class=isActiveSticker
