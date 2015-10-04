@@ -1,0 +1,17 @@
+section#my_settings.animated
+  .container
+    form
+      .form-group.row
+        h2.text-center.text-uppercase Вы
+        .text-center.sex
+          sex-component value=model.my_sex sex='male' title='Парень'
+          sex-component value=model.my_sex sex='female' title='Девушка'
+      .form-group.row
+        h2.text-center.text-uppercase Ваш факультет
+        = each faculty in faculties
+          myfaculty-component value=model.my_faculty faculty=faculty title=faculty.name
+      .form-group.row
+        h2.text-center.text-uppercase Ваш ник
+        nickname-input value=model.nickname
+      .form-group.text-center.actions
+        button.btn.btn-default.text-uppercase#save_my_settings{action 'save'} type="button"  Сохранить настройки

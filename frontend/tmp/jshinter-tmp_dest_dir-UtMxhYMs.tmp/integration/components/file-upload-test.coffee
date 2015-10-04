@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/tests/integration/components/file-upload-test.coffee

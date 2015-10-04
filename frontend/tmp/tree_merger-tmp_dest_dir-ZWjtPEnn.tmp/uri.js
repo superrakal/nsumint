@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/tmp/funnel-output_path-AwMX4dgr.tmp/uri.js

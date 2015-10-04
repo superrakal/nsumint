@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/app/routes/application.coffee

@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/node_modules/ember-websockets/addon/helpers/socketio-proxy.js

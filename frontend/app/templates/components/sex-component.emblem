@@ -1,0 +1,2 @@
+button.btn.btn-default.text-uppercase{action 'selectSex' sex} type="button" class=class
+  = title

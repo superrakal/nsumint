@@ -1,0 +1,12 @@
+bower_components
+dist
+node_modules
+screenshots
+tmp
+tests
+app-coffee
+tests-coffee
+addon-coffee
+doc
+coverage
+junk

@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/node_modules/active-model-adapter/app/initializers/active-model-adapter.js

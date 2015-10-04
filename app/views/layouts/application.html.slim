@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title NSUMINT - анонимный чат студентов НГУ
+    meta charset="utf-8"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = include_ember_script_tags :frontend
+    = include_ember_stylesheet_tags :frontend
+    = csrf_meta_tags
+    = favicon_link_tag
+  body
+    = yield
+

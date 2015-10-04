@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/app/components/nickname-input.coffee

@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/node_modules/ember-disable-proxy-controllers/app/controllers/object.js

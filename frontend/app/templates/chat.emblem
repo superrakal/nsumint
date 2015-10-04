@@ -1,0 +1,9 @@
+section#chat.animated
+  .container
+    chatbox-component model=controller.model
+    small.animated class=typing_class
+      |Собеседник набирает сообщение ...
+    .message-input
+      form{action 'sendMessage' on='submit'}
+        message-input value=message disabled=controllers.application.isChatting model=controller.model
+

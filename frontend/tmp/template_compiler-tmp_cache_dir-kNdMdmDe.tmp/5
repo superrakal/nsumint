@@ -1,0 +1,1 @@
+<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 faculty"><button {{action 'selectFaculty' faculty}} type="button" class="btn btn-default text-uppercase {{class}}">{{title}}</button></div>

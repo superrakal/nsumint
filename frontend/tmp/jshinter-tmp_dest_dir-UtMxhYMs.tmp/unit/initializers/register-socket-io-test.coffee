@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/tests/unit/initializers/register-socket-io-test.coffee

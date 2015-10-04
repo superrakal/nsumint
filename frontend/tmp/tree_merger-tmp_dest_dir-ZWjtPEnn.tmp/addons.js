@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/tmp/caching-writer-dest-dir_Eag0RX.tmp/addons.js

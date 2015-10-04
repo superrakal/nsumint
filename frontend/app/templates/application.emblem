@@ -1,0 +1,47 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-collapse" data-toggle="collapse" type="button"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    #bs-collapse.collapse.navbar-collapse
+      p.navbar-text.navbar-left
+        i.fa.fa-code-fork
+        |&nbsp;4.3.0
+      p.navbar-text.navbar-right
+        i.fa.fa-user
+        |&nbsp;
+        span#connectCounter
+        = connectCounter
+        |&nbsp;Онлайн
+.container-fluid
+  .col-lg-2.col-md-3.col-sm-12.col-xs-12.logo.text-center.hidden-xs
+    p.center-block NSUMINT
+    small Анонимный чат студентов НГУ
+  = unless isChatting
+    .col-lg-10.col-md-9.col-sm-12.col-xs-12.text-center
+      .steps
+        .col-lg-4.col-md-4.col-sm-4.col-xs-4.step
+          = link-to 'my_settings' tagName='button' class='btn btn-default btn-circle'
+            i.fa.fa-user.fa-3x
+          p.hidden-xs Ваши настройки
+        .col-lg-4.col-md-4.col-sm-4.col-xs-4.step
+          = link-to 'user_settings' tagName='button' class='btn btn-default btn-circle'
+            i.fa.fa-user-secret.fa-3x
+          p.hidden-xs Настройки собеседника
+        .col-lg-4.col-md-4.col-sm-4.col-xs-4.step
+          = link-to 'searching' tagName='button' class='btn btn-default btn-circle'
+            i.fa.fa-search.fa-3x
+          p.hidden-xs Поиск собеседника
+  = else
+    .col-lg-8.col-md-7.col-sm-12.col-xs-12.chat-tools
+      .steps
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12.step.text-center
+          button.btn.btn-default.btn-circle{action 'endDialog'}
+            i.fa.fa-stop.fa-3x
+          p.hidden-xs Завершить разговор
+
+.container-fluid
+  = outlet

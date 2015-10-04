@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/tmp/funnel-output_path-W87FcXVe.tmp/ember/ember-testing.js

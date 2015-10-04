@@ -1,0 +1,88 @@
+section#chat
+  .chatbox-wrapper
+    overflow: auto
+
+  .message-input
+    position: absolute
+    left: 0
+    bottom: 30px
+    width: 100%
+    height: 30px
+    padding: 0 30px
+    textarea
+      resize: none
+      height: 40px
+      margin: 0 auto
+      max-width: 740px
+
+  .message
+    padding: 15px !important
+    margin-bottom: 10px
+    border-radius: 4px
+    color: white
+    .message_title
+      height: 30px
+      text-transform: uppercase
+      .time
+        padding-left: 20px
+    .message_body
+      word-wrap: break-word
+      a
+        color: white !important
+    &.user_message
+      background-color: #549470
+
+  .bubble
+    position: relative
+    max-width: 450px
+    -webkit-border-radius: 10px
+    -moz-border-radius: 10px
+    border-radius: 10px
+    display: block
+    &.my_message
+      background-color: #3CB371
+      margin-left: 15px
+      &:after
+        content: ''
+        position: absolute
+        border-style: solid
+        border-width: 15px 15px 15px 0
+        border-color: transparent #3CB371
+        display: block
+        width: 0
+        z-index: 1
+        left: -15px
+        top: calc(50% - 15px)
+    &.user_message
+      background-color: #549470
+      margin-right: 15px
+      &:after
+        content: ''
+        position: absolute
+        border-style: solid
+        border-width: 15px 0 15px 15px
+        border-color: transparent #549470
+        display: block
+        width: 0
+        z-index: 1
+        right: -15px
+        top: calc(50% - 15px)
+.clear
+  clear: both
+
+small
+  &.not-displaying
+    opacity: 0
+
+.input_wrapper
+  margin: 0 auto
+  text-align: center
+  textarea.message_input
+    margin-right: 15px !important
+    display: inline-block
+  i.fa-camera
+    vertical-align: super
+    cursor: pointer
+
+#link.tab-pane
+  margin-top: 10px

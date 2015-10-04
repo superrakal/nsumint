@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/tests/unit/models/user-test.coffee

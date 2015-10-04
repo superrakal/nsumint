@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/tmp/funnel-output_path-EDDZceCa.tmp/frontend/tests/helpers/start-app.js

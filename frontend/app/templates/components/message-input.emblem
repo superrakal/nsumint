@@ -1,0 +1,4 @@
+.input_wrapper
+  = textarea class="form-control message_input" value=value disabled=isDisabled autofocus='true' placeholder='Введите сообщение... (Перенос строки ctrl+enter)'
+  = unless isDisabled
+    file-upload model=model

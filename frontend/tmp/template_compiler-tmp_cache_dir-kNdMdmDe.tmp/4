@@ -1,0 +1,1 @@
+<div class="input_wrapper">{{textarea value=value disabled=isDisabled autofocus='true' placeholder='Введите сообщение... (Перенос строки ctrl+enter)' class="form-control message_input"}}{{#unless isDisabled}}{{file-upload model=model}}{{/unless}}</div>

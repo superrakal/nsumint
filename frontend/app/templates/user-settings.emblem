@@ -1,0 +1,17 @@
+section#user_settings.animated
+  .container
+    form
+      .form-group
+        h2.text-center.text-uppercase Ваш собеседник
+        .text-center.sex
+          sex-component value=model.user_sex sex='male' title='Парень'
+          sex-component value=model.user_sex sex='female' title='Девушка'
+          sex-component value=model.user_sex sex='all' title='Не важен'
+      .form-group
+        h2.text-center.text-uppercase Факультет(ы) собеседника
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+          select-all value=model.user_faculties faculties=faculties
+          = each faculty in faculties
+            userfaculty-component value=model.user_faculties faculty=faculty title=faculty.name
+      .form-group.text-center.actions
+        button.btn.btn-default.text-uppercase#save_user_settings{action 'save'} type="button"  Сохранить настройки

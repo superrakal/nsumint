@@ -1,0 +1,38 @@
+i.fa.fa-camera.fa-2x{action 'openModal'}
+#file-upload.modal.fade aria-labelledby="FileUpload" role="dialog" tabindex="-1"
+  .modal-dialog role="document"
+    .modal-content
+      .modal-header
+        button.close aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  &times;
+        h4.modal-title Отправка фотографии
+      .modal-body
+        ul.nav.nav-tabs role="tablist"
+          li.active role="presentation"
+            a aria-controls="upload" data-toggle="tab" href="#upload" role="tab"  Загрузить файл
+          li role="presentation"
+            a aria-controls="link" data-toggle="tab" href="#link" role="tab" Указать ссылку
+        .tab-content
+          #upload.tab-pane.active role="tabpanel"
+            .file-upload-small-text
+              small
+                |Отправлять можно только .jpeg, .jpg, .png, .gif
+                br
+                |Размер файла не должен превышать 1MB
+              = if value.errors.image_content_type.length
+                .alert.alert-danger.alert-dismissible.fade.in role='alert'
+                  button.close aria-label='Close' data-dismiss='alert' type='button'
+                    span aria-hidden='true'  ×
+                  p Недопустимый формат файла!
+              = if value.errors.image_file_size.length
+                .alert.alert-danger.alert-dismissible.fade.in role='alert'
+                  button.close aria-label='Close' data-dismiss='alert' type='button'
+                    span aria-hidden='true'  ×
+                  p Размер изображения не должен превышать 1 мегабайт
+            = input type='file' change='change'
+          #link.tab-pane role="tabpanel"
+            = input class='form-control'  type='text' placeholder='Укажите ссылку на изображение' value=image_link
+
+      .modal-footer
+        button.btn.btn-default{action 'cancel'} type="button"  Отменить
+        button.btn.btn-default.active{action 'send'} type="button"  Отправить

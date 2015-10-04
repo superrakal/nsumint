@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/app/components/chatbox-component.coffee

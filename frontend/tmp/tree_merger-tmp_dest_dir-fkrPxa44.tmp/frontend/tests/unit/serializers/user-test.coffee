@@ -1,0 +1,1 @@
+/home/egor/RubymineProjects/nsumint/frontend/tests/unit/serializers/user-test.coffee
