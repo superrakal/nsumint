@@ -1,1 +1,0 @@
-<div class="nickname">{{input class='form-control' type='text' value=value placeholder='Максимум 12 символов (Не обязателен)'}}</div>

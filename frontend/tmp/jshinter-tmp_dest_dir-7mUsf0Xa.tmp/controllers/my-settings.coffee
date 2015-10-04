@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/app/controllers/my-settings.coffee

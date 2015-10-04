@@ -1,4 +1,0 @@
-module('JSHint - .');
-test('transitions.js should pass jshint', function() { 
-  ok(true, 'transitions.js should pass jshint.'); 
-});

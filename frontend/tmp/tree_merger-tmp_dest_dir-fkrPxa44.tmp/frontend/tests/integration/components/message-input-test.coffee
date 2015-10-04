@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/tests/integration/components/message-input-test.coffee

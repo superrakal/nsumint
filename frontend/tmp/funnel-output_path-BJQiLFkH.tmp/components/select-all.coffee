@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/app/components/select-all.coffee

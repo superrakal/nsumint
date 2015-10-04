@@ -1,1 +1,0 @@
-<button {{action 'selectSex' sex}} type="button" class="btn btn-default text-uppercase {{class}}">{{title}}</button>

@@ -3358,3 +3358,126 @@ Processing by Api::V1::UsersController#update as JSON
   MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56100c65d3054d1133000005')} update={"$set"=>{"socket_id"=>"zbNVusjhDupiRG2wAAOd", "updated_at"=>2015-10-03 17:23:56 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
                          COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3874ms
 Completed 204 No Content in 7ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 15:40:17 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (9.0ms)
+Completed 200 OK in 1650ms (Views: 1649.8ms)
+
+
+Started GET "/api/v1/users/5610eaebd3054d169c000000" for 127.0.0.1 at 2015-10-04 15:40:25 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"5610eaebd3054d169c000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5774ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5610eaebd3054d169c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.1961ms
+Completed 200 OK in 63ms (Views: 4.6ms)
+
+
+Started PUT "/api/v1/users/5610eaebd3054d169c000000" for 127.0.0.1 at 2015-10-04 15:40:25 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>nil, "status"=>"created", "socket_id"=>"BLuzRjlE26t7v_s7AAUf", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>nil}, "id"=>"5610eaebd3054d169c000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5610eaebd3054d169c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2830ms
+Unpermitted parameter: user_faculties
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-04 15:40:25 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.3483ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4110ms
+Completed 200 OK in 9ms (Views: 5.1ms)
+
+
+Started PUT "/api/v1/users/5610eaebd3054d169c000000" for 127.0.0.1 at 2015-10-04 15:40:25 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>nil, "status"=>"created", "socket_id"=>"0pxyP4lb_nFMROm1AAUi", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>nil}, "id"=>"5610eaebd3054d169c000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2868ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5610eaebd3054d169c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1798ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5610eaebd3054d169c000000')} update={"$set"=>{"socket_id"=>"0pxyP4lb_nFMROm1AAUi", "updated_at"=>2015-10-04 09:40:25 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2787ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-04 15:41:59 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 334ms (Views: 334.1ms)
+
+
+Started GET "/api/v1/users/5610eaebd3054d169c000000" for 127.0.0.1 at 2015-10-04 15:42:00 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"5610eaebd3054d169c000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4370ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5610eaebd3054d169c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2248ms
+Completed 200 OK in 7ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/5610eaebd3054d169c000000" for 127.0.0.1 at 2015-10-04 15:42:00 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>nil, "status"=>"created", "socket_id"=>"0pxyP4lb_nFMROm1AAUi", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>nil}, "id"=>"5610eaebd3054d169c000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5610eaebd3054d169c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4113ms
+Unpermitted parameter: user_faculties
+Completed 204 No Content in 10ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-04 15:42:00 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4704ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3595ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2806ms
+Completed 200 OK in 6ms (Views: 3.2ms)
+
+
+Started PUT "/api/v1/users/5610eaebd3054d169c000000" for 127.0.0.1 at 2015-10-04 15:42:01 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>nil, "status"=>"created", "socket_id"=>"9R-JXNLCt5PEaE6WAAUj", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>nil}, "id"=>"5610eaebd3054d169c000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5610eaebd3054d169c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3629ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5610eaebd3054d169c000000')} update={"$set"=>{"socket_id"=>"9R-JXNLCt5PEaE6WAAUj", "updated_at"=>2015-10-04 09:42:01 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3822ms
+Completed 204 No Content in 6ms
+
+
+Started PUT "/api/v1/users/5610eaebd3054d169c000000" for 127.0.0.1 at 2015-10-04 15:43:02 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>nil, "status"=>"created", "socket_id"=>"9R-JXNLCt5PEaE6WAAUj", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>nil}, "id"=>"5610eaebd3054d169c000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3090ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5610eaebd3054d169c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2244ms
+Unpermitted parameter: user_faculties
+Completed 204 No Content in 4ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-04 15:43:02 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2689ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2036ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1957ms
+Completed 200 OK in 4ms (Views: 1.8ms)
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-04 15:43:04 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3574ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2010ms
+Completed 200 OK in 4ms (Views: 1.6ms)
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-04 15:43:04 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3293ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2010ms
+Completed 200 OK in 3ms (Views: 1.4ms)
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-04 15:43:05 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3524ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3068ms
+Completed 200 OK in 3ms (Views: 1.5ms)

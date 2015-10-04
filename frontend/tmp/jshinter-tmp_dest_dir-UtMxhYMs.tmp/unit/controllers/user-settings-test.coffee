@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/tests/unit/controllers/user-settings-test.coffee

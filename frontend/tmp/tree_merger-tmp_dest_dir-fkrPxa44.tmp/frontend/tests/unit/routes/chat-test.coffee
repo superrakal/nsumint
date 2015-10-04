@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/tests/unit/routes/chat-test.coffee

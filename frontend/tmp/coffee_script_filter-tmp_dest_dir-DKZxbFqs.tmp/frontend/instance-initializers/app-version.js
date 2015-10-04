@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/node_modules/ember-cli-app-version/app/instance-initializers/app-version.js

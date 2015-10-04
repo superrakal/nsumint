@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/tmp/babel-cache_path-dI0WCyZH.tmp/frontend/tests/integration/components/myfaculty-component-test.js

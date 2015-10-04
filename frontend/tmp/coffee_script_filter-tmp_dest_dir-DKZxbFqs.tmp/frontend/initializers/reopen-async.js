@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/node_modules/ember-cli-slide-animation/app/initializers/reopen-async.js

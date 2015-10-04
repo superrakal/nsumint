@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/tmp/tree_merger-tmp_dest_dir-e2CTT2Bw.tmp/initializers/app-version.js

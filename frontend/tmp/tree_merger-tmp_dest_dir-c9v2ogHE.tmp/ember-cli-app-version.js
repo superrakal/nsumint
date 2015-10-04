@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/tmp/reexporter-tmp_cache_dir-cbwi6iOc.tmp/reexports/ember-cli-app-version.js

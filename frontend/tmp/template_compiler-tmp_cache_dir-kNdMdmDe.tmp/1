@@ -1,1 +1,0 @@
-<section id="chat" class="animated"><div class="container">{{chatbox-component model=controller.model}}<small class="animated {{typing_class}}">Собеседник набирает сообщение ...</small><div class="message-input"><form {{action 'sendMessage' on='submit'}}>{{message-input value=message disabled=controllers.application.isChatting model=controller.model}}</form></div></div></section>

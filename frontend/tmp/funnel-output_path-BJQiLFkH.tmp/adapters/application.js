@@ -1,1 +1,0 @@
-/home/egor/RubymineProjects/nsumint/frontend/app/adapters/application.js

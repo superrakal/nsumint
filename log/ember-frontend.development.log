@@ -714,3 +714,20 @@ Funnel: App JS Files (1)                      | 87ms
 SourcemapConcat (3)                           | 46ms (15 ms)        
 Concat: Test Support JS (1)                   | 27ms                
 
+Future versions of Ember CLI will not support v0.10.25. Please update to Node 0.12 or io.js.
+version: 1.13.1
+Could not find watchman, falling back to NodeWatcher for file system events.
+Visit http://www.ember-cli.com/#watchman for more info.
+BuildingBuilding.Building..Building...Building...
+
+Build successful - 2743ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 1875ms              
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 1875ms              
+CoffeeScriptFilter (2)                        | 160ms (80 ms)       
+
