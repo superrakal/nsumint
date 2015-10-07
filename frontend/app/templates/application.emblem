@@ -9,7 +9,7 @@ nav.navbar.navbar-default
     #bs-collapse.collapse.navbar-collapse
       p.navbar-text.navbar-left
         i.fa.fa-code-fork
-        |&nbsp;4.4.0
+        |&nbsp;4.4.1
       p.navbar-text.navbar-right
         i.fa.fa-user
         |&nbsp;

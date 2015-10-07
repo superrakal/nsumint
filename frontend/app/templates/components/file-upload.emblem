@@ -34,5 +34,8 @@ i.fa.fa-camera.fa-2x{action 'openModal'}
             = input class='form-control'  type='text' placeholder='Укажите ссылку на изображение' value=image_link
 
       .modal-footer
-        button.btn.btn-default{action 'cancel'} type="button"  Отменить
-        button.btn.btn-default.active{action 'send'} type="button"  Отправить
+        = unless isUploading
+          button.btn.btn-default{action 'cancel'} type="button"  Отменить
+          button.btn.btn-default.active{action 'send'} type="button"  Отправить
+        = else
+          i.fa.fa-refresh.fa-spin

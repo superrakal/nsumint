@@ -3,6 +3,7 @@
 FileUploadComponent = Ember.Component.extend
   socketIOService: Ember.inject.service('socket-io')
   image_link: ''
+  isUploading: false
 
   _init: (->
     @set 'store', @get('parentView.targetObject.store')
@@ -46,9 +47,11 @@ FileUploadComponent = Ember.Component.extend
         @set 'image_link', ''
       else
         image = @get 'value'
-        if image
+        @set 'isUploading', true
+        if (image.get 'image').length > 0
           image.save().then  =>
             image.reload()
+            @set 'isUploading', false
             $('input').val("")
             data = {image_url: image.get('url'), my_socket_id: (@get 'model.socket_id'), user_socket_id: (@get 'model.user_socket_id')}
             @socket.emit('image', data)

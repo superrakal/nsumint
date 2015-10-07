@@ -1985,3 +1985,413 @@ Babel (5)                                     | 50ms (10 ms)
 SourcemapConcat (3)                           | 46ms (15 ms)        
 TreeMerger (appAndDependencies) (1)           | 29ms                
 
+Future versions of Ember CLI will not support v0.10.25. Please update to Node 0.12 or io.js.
+version: 1.13.1
+Could not find watchman, falling back to NodeWatcher for file system events.
+Visit http://www.ember-cli.com/#watchman for more info.
+BuildingBuilding.Building..Building...BuildingBuilding...
+
+Build successful - 3254ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 1887ms              
+Babel                                         | 364ms               
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 1887ms              
+Babel (5)                                     | 654ms (130 ms)      
+CoffeeScriptFilter (2)                        | 163ms (81 ms)       
+
+file changed components/file-upload.coffee
+
+Build successful - 577ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 179ms               
+Funnel: App JS Files                          | 40ms                
+SourcemapConcat                               | 37ms                
+Babel                                         | 33ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 179ms               
+SourcemapConcat (3)                           | 63ms (21 ms)        
+Babel (5)                                     | 52ms (10 ms)        
+Funnel: App JS Files (1)                      | 40ms                
+
+file changed components/file-upload.coffee
+
+Build successful - 731ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 128ms               
+Concat: App                                   | 98ms                
+Funnel: App JS Files                          | 72ms                
+Babel                                         | 47ms                
+TreeMerger (appAndDependencies)               | 42ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 128ms               
+Concat: App (1)                               | 98ms                
+Babel (5)                                     | 83ms (16 ms)        
+Funnel: App JS Files (1)                      | 72ms                
+SourcemapConcat (3)                           | 49ms (16 ms)        
+TreeMerger (appAndDependencies) (1)           | 42ms                
+CoffeeScriptFilter (2)                        | 40ms (20 ms)        
+
+file changed components/file-upload.coffee
+
+Build successful - 598ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 128ms               
+Funnel: App JS Files                          | 97ms                
+TreeMerger (appAndDependencies)               | 44ms                
+Babel                                         | 33ms                
+Concat: Test Support JS                       | 32ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 128ms               
+Funnel: App JS Files (1)                      | 97ms                
+Babel (5)                                     | 49ms (9 ms)         
+SourcemapConcat (3)                           | 48ms (16 ms)        
+TreeMerger (appAndDependencies) (1)           | 44ms                
+Concat: Test Support JS (1)                   | 32ms                
+
+file changed components/file-upload.coffee
+
+Build successful - 547ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 176ms               
+Funnel: App JS Files                          | 40ms                
+Babel                                         | 31ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 176ms               
+Babel (5)                                     | 47ms (9 ms)         
+SourcemapConcat (3)                           | 44ms (14 ms)        
+Funnel: App JS Files (1)                      | 40ms                
+CoffeeScriptFilter (2)                        | 29ms (14 ms)        
+
+file changed components/file-upload.coffee
+
+Build successful - 835ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 196ms               
+Funnel: App JS Files                          | 147ms               
+Babel                                         | 49ms                
+Concat: Test Support JS                       | 44ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 196ms               
+Funnel: App JS Files (1)                      | 147ms               
+SourcemapConcat (3)                           | 73ms (24 ms)        
+Babel (5)                                     | 68ms (13 ms)        
+Concat: Test Support JS (1)                   | 44ms                
+
+file changed components/file-upload.coffee
+
+Build successful - 741ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 196ms               
+Funnel: App JS Files                          | 127ms               
+Babel                                         | 45ms                
+TreeMerger (appAndDependencies)               | 44ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 196ms               
+Funnel: App JS Files (1)                      | 127ms               
+Babel (5)                                     | 64ms (12 ms)        
+SourcemapConcat (3)                           | 51ms (17 ms)        
+TreeMerger (appAndDependencies) (1)           | 44ms                
+
+file changed components/file-upload.coffee
+
+Build successful - 541ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 122ms               
+Funnel: App JS Files                          | 94ms                
+Babel                                         | 33ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 122ms               
+Funnel: App JS Files (1)                      | 94ms                
+Babel (5)                                     | 46ms (9 ms)         
+SourcemapConcat (3)                           | 43ms (14 ms)        
+
+file changed components/file-upload.coffee
+
+Build successful - 552ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 117ms               
+Funnel: App JS Files                          | 85ms                
+ES6: App Tree                                 | 36ms                
+TreeMerger (appAndDependencies)               | 29ms                
+Babel                                         | 29ms                
+Concat: App                                   | 28ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 117ms               
+Funnel: App JS Files (1)                      | 85ms                
+SourcemapConcat (3)                           | 47ms (15 ms)        
+Babel (5)                                     | 41ms (8 ms)         
+ES6: App Tree (1)                             | 36ms                
+TreeMerger (appAndDependencies) (1)           | 29ms                
+Concat: App (1)                               | 28ms                
+
+file changed components/file-upload.coffee
+
+Build successful - 569ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 117ms               
+Funnel: App JS Files                          | 90ms                
+Babel                                         | 41ms                
+CoffeeScriptFilter                            | 29ms                
+SourcemapConcat                               | 29ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 117ms               
+Funnel: App JS Files (1)                      | 90ms                
+Babel (5)                                     | 55ms (11 ms)        
+SourcemapConcat (3)                           | 51ms (17 ms)        
+CoffeeScriptFilter (2)                        | 36ms (18 ms)        
+
+file changed components/file-upload.coffee
+
+Build successful - 848ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 192ms               
+Funnel: App JS Files                          | 140ms               
+Babel                                         | 46ms                
+Concat: Test Support JS                       | 45ms                
+TreeMerger (appAndDependencies)               | 43ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 192ms               
+Funnel: App JS Files (1)                      | 140ms               
+SourcemapConcat (3)                           | 76ms (25 ms)        
+Babel (5)                                     | 66ms (13 ms)        
+Concat: Test Support JS (1)                   | 45ms                
+CoffeeScriptFilter (2)                        | 44ms (22 ms)        
+TreeMerger (appAndDependencies) (1)           | 43ms                
+
+file changed components/file-upload.coffee
+
+Build successful - 587ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 150ms               
+Funnel: App JS Files                          | 93ms                
+Babel                                         | 37ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 150ms               
+Funnel: App JS Files (1)                      | 93ms                
+Babel (5)                                     | 51ms (10 ms)        
+SourcemapConcat (3)                           | 46ms (15 ms)        
+
+file changed templates/components/file-upload.emblem
+
+Build successful - 706ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 126ms               
+ES6: App Tree                                 | 108ms               
+Funnel: App JS Files                          | 67ms                
+Concat: Test Support JS                       | 44ms                
+SourcemapConcat                               | 36ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 126ms               
+ES6: App Tree (1)                             | 108ms               
+SourcemapConcat (3)                           | 74ms (24 ms)        
+Funnel: App JS Files (1)                      | 67ms                
+Concat: Test Support JS (1)                   | 44ms                
+TemplateCompiler (2)                          | 36ms (18 ms)        
+
+file changed components/file-upload.coffee
+
+Build successful - 528ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 119ms               
+Funnel: App JS Files                          | 88ms                
+Babel                                         | 27ms                
+TreeMerger (appAndDependencies)               | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 119ms               
+Funnel: App JS Files (1)                      | 88ms                
+SourcemapConcat (3)                           | 45ms (15 ms)        
+Babel (5)                                     | 40ms (8 ms)         
+CoffeeScriptFilter (2)                        | 27ms (13 ms)        
+TreeMerger (appAndDependencies) (1)           | 27ms                
+
+file changed components/file-upload.coffee
+
+Build successful - 535ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 120ms               
+ES6: App Tree                                 | 70ms                
+Funnel: App JS Files                          | 39ms                
+Babel                                         | 30ms                
+Concat: Test Support JS                       | 27ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 120ms               
+ES6: App Tree (1)                             | 70ms                
+SourcemapConcat (3)                           | 46ms (15 ms)        
+Babel (5)                                     | 43ms (8 ms)         
+Funnel: App JS Files (1)                      | 39ms                
+Concat: Test Support JS (1)                   | 27ms                
+
+file changed components/file-upload.coffee
+
+Build successful - 721ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 144ms               
+Funnel: App JS Files                          | 89ms                
+Babel                                         | 66ms                
+TreeMerger (appAndDependencies)               | 50ms                
+CoffeeScriptFilter                            | 46ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 144ms               
+Funnel: App JS Files (1)                      | 89ms                
+Babel (5)                                     | 89ms (17 ms)        
+CoffeeScriptFilter (2)                        | 56ms (28 ms)        
+TreeMerger (appAndDependencies) (1)           | 50ms                
+SourcemapConcat (3)                           | 46ms (15 ms)        
+
+Future versions of Ember CLI will not support v0.10.25. Please update to Node 0.12 or io.js.
+version: 1.13.1
+Could not find watchman, falling back to NodeWatcher for file system events.
+Visit http://www.ember-cli.com/#watchman for more info.
+BuildingBuilding.Building..Building...BuildingBuilding...
+
+Build successful - 3306ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 1911ms              
+Babel                                         | 382ms               
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 1911ms              
+Babel (5)                                     | 671ms (134 ms)      
+CoffeeScriptFilter (2)                        | 189ms (94 ms)       
+
+file changed components/file-upload.coffee
+
+Build successful - 1015ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 311ms               
+Funnel: App JS Files                          | 74ms                
+TreeMerger (appAndDependencies)               | 53ms                
+Babel                                         | 52ms                
+Concat: Test Support JS                       | 51ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 311ms               
+Babel (5)                                     | 82ms (16 ms)        
+SourcemapConcat (3)                           | 78ms (26 ms)        
+Funnel: App JS Files (1)                      | 74ms                
+CoffeeScriptFilter (2)                        | 53ms (26 ms)        
+TreeMerger (appAndDependencies) (1)           | 53ms                
+Concat: Test Support JS (1)                   | 51ms                
+
+file changed templates/components/file-upload.emblem
+
+Build successful - 686ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 134ms               
+Funnel: App JS Files                          | 122ms               
+CoffeeScriptFilter                            | 53ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 134ms               
+Funnel: App JS Files (1)                      | 122ms               
+CoffeeScriptFilter (2)                        | 61ms (30 ms)        
+SourcemapConcat (3)                           | 48ms (16 ms)        
+Babel (5)                                     | 40ms (8 ms)         
+
+file changed components/file-upload.coffee
+
+Build successful - 719ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 197ms               
+Funnel: App JS Files                          | 72ms                
+SourcemapConcat                               | 45ms                
+Concat: Test Support JS                       | 41ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 197ms               
+SourcemapConcat (3)                           | 83ms (27 ms)        
+Funnel: App JS Files (1)                      | 72ms                
+Concat: Test Support JS (1)                   | 41ms                
+
+file changed templates/application.emblem
+
+Build successful - 536ms.
+
+Slowest Trees                                 | Total               
+----------------------------------------------+---------------------
+Concat: Vendor                                | 178ms               
+Funnel: App JS Files                          | 40ms                
+
+Slowest Trees (cumulative)                    | Total (avg)         
+----------------------------------------------+---------------------
+Concat: Vendor (1)                            | 178ms               
+SourcemapConcat (3)                           | 46ms (15 ms)        
+Funnel: App JS Files (1)                      | 40ms                
+
