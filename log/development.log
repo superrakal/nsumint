@@ -7821,3 +7821,1486 @@ Processing by Api::V1::ImagesController#destroy as JSON
   MOPED: 127.0.0.1:27017 DELETE       database=nsumint_development collection=images selector={"_id"=>BSON::ObjectId('5615431fd3054d0f4d00000e')} flags=[:remove_first]
                          COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5338ms
 Completed 204 No Content in 10ms (Views: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:19:17 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (8.8ms)
+Completed 200 OK in 441ms (Views: 441.1ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:19:23 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1060ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5713ms
+Completed 200 OK in 36ms (Views: 10.5ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:19:23 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"-Ut5X3oxyzlV_pesAAyb", "user_socket_id"=>"b8eBw0O6kckwYkHkAAyZ", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2782ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2084ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"updated_at"=>2015-10-07 16:19:23 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3803ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-07 22:19:23 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4153ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2613ms
+Completed 200 OK in 13ms (Views: 4.2ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:19:23 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3204ms
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:19:24 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"cUkcxuHQoKS7xZbTAAyf", "user_socket_id"=>"b8eBw0O6kckwYkHkAAyZ", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3350ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"socket_id"=>"cUkcxuHQoKS7xZbTAAyf", "updated_at"=>2015-10-07 16:19:24 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3664ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:19:24 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"b8eBw0O6kckwYkHkAAyZ", "user_socket_id"=>"cUkcxuHQoKS7xZbTAAyf", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3209ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2844ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"user_socket_id"=>"cUkcxuHQoKS7xZbTAAyf", "updated_at"=>2015-10-07 16:19:24 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.6130ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:19:41 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3951ms
+Completed 200 OK in 4ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:19:41 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"cUkcxuHQoKS7xZbTAAyf", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3505ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"status"=>"online", "user_socket_id"=>"", "updated_at"=>2015-10-07 16:19:41 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4470ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:19:41 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"b8eBw0O6kckwYkHkAAyZ", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3231ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"status"=>"online", "user_socket_id"=>"", "updated_at"=>2015-10-07 16:19:41 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5951ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:19:47 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3929ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1910ms
+Completed 200 OK in 4ms (Views: 1.8ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:19:53 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"cUkcxuHQoKS7xZbTAAyf", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3409ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"updated_at"=>2015-10-07 16:19:53 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3557ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:19:53 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2635ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2663ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2565ms
+Completed 200 OK in 4ms (Views: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:20:29 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (9.2ms)
+Completed 200 OK in 452ms (Views: 451.9ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:20:35 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5746ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3471ms
+Completed 200 OK in 25ms (Views: 8.9ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:20:35 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"cUkcxuHQoKS7xZbTAAyf", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2761ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1905ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"updated_at"=>2015-10-07 16:20:35 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4005ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:20:35 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3724ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2027ms
+Completed 200 OK in 4ms (Views: 2.0ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:20:35 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"pLSRXcBmxm-2lFRVAAyi", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3533ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"socket_id"=>"pLSRXcBmxm-2lFRVAAyi", "updated_at"=>2015-10-07 16:20:35 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3757ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:20:38 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3588ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1853ms
+Completed 200 OK in 4ms (Views: 1.4ms)
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:20:41 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3414ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1807ms
+Completed 200 OK in 3ms (Views: 1.4ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:20:42 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"searching", "socket_id"=>"pLSRXcBmxm-2lFRVAAyi", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3932ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"status"=>"searching", "updated_at"=>2015-10-07 16:20:42 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5996ms
+Completed 204 No Content in 7ms
+
+
+Started POST "/api/v1/users/search_user" for 127.0.0.1 at 2015-10-07 22:20:42 +0600
+Processing by Api::V1::UsersController#search_user as */*
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3591ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"status"=>"searching"} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2828ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2091ms
+Completed 205 Reset Content in 4ms (Views: 1.5ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:20:48 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"pLSRXcBmxm-2lFRVAAyi", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4237ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"status"=>"online", "updated_at"=>2015-10-07 16:20:48 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3440ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:20:50 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3746ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2110ms
+Completed 200 OK in 3ms (Views: 1.4ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:20:58 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"pLSRXcBmxm-2lFRVAAyi", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3500ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"updated_at"=>2015-10-07 16:20:58 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3371ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:20:58 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2923ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3335ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2501ms
+Completed 200 OK in 4ms (Views: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:21:43 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 323ms (Views: 322.8ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:21:44 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3712ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3297ms
+Completed 200 OK in 6ms (Views: 1.1ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:21:44 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"b8eBw0O6kckwYkHkAAyZ", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4652ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"updated_at"=>2015-10-07 16:21:44 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5155ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-07 22:21:44 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4346ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3259ms
+Completed 200 OK in 13ms (Views: 4.5ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:21:44 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4320ms
+Completed 200 OK in 5ms (Views: 1.0ms)
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:21:44 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3469ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2015ms
+Completed 200 OK in 3ms (Views: 1.5ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:21:44 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"L30ebMvTegMwfcN1AAyj", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3493ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"socket_id"=>"L30ebMvTegMwfcN1AAyj", "updated_at"=>2015-10-07 16:21:44 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3030ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:21:46 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2854ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2704ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1986ms
+Completed 200 OK in 4ms (Views: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:22:26 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (8.8ms)
+Completed 200 OK in 440ms (Views: 439.3ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:22:32 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7100ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3295ms
+Completed 200 OK in 21ms (Views: 5.8ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:22:32 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"pLSRXcBmxm-2lFRVAAyi", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3555ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"updated_at"=>2015-10-07 16:22:32 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3607ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:22:32 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3157ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5078ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4053ms
+Completed 200 OK in 5ms (Views: 2.8ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:22:32 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3576ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "updated_at"=>2015-10-07 16:22:32 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3152ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:22:36 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "user_socket_id"=>"", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4339ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"nickname"=>"", "updated_at"=>2015-10-07 16:22:36 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4201ms
+Completed 204 No Content in 7ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:22:36 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2956ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2124ms
+Completed 200 OK in 3ms (Views: 1.4ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:22:43 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "user_socket_id"=>"", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.2872ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"updated_at"=>2015-10-07 16:22:43 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4714ms
+Completed 204 No Content in 10ms
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:22:43 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"searching", "socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "user_socket_id"=>"", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3743ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2553ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"status"=>"searching", "updated_at"=>2015-10-07 16:22:43 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3788ms
+Completed 204 No Content in 6ms
+
+
+Started POST "/api/v1/users/search_user" for 127.0.0.1 at 2015-10-07 22:22:43 +0600
+Processing by Api::V1::UsersController#search_user as */*
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3250ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2789ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"status"=>"searching"} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4323ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3664ms
+Completed 205 Reset Content in 6ms (Views: 1.6ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:22:47 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"L30ebMvTegMwfcN1AAyj", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3097ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2522ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"updated_at"=>2015-10-07 16:22:47 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3312ms
+Completed 204 No Content in 6ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:22:47 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3479ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2697ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.1943ms
+Completed 200 OK in 4ms (Views: 2.4ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:22:48 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"L30ebMvTegMwfcN1AAyj", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.9732ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"updated_at"=>2015-10-07 16:22:48 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3855ms
+Completed 204 No Content in 7ms
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:22:48 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"searching", "socket_id"=>"L30ebMvTegMwfcN1AAyj", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3183ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2997ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"status"=>"searching", "updated_at"=>2015-10-07 16:22:48 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3719ms
+Completed 204 No Content in 6ms
+
+
+Started POST "/api/v1/users/search_user" for 127.0.0.1 at 2015-10-07 22:22:48 +0600
+Processing by Api::V1::UsersController#search_user as */*
+  Parameters: {"id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3254ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"status"=>"searching"} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3850ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2289ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2654ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1674ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"status"=>"chatting", "user_socket_id"=>"L30ebMvTegMwfcN1AAyj", "updated_at"=>2015-10-07 16:22:48 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3462ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"status"=>"chatting", "user_socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "updated_at"=>2015-10-07 16:22:48 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2558ms
+Completed 200 OK in 6ms (Views: 0.6ms)
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-07 22:22:48 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3271ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3858ms
+Completed 200 OK in 12ms (Views: 4.4ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:22:48 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3195ms
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-07 22:22:48 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4447ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3164ms
+Completed 200 OK in 6ms (Views: 3.5ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:22:48 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3772ms
+Completed 200 OK in 4ms (Views: 0.9ms)
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-07 22:23:02 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4444ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2656ms
+Completed 200 OK in 5ms (Views: 3.1ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:23:02 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4320ms
+Completed 200 OK in 3ms (Views: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:23:05 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.0ms)
+Completed 200 OK in 206ms (Views: 206.0ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:23:05 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4048ms
+Completed 200 OK in 5ms (Views: 1.0ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:23:06 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"L30ebMvTegMwfcN1AAyj", "user_socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3672ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"updated_at"=>2015-10-07 16:23:06 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3645ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-07 22:23:06 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3960ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2840ms
+Completed 200 OK in 5ms (Views: 3.1ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:23:06 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3414ms
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:23:06 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"AaxiHGhLywa1HcrTAAym", "user_socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2859ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"socket_id"=>"AaxiHGhLywa1HcrTAAym", "updated_at"=>2015-10-07 16:23:06 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3254ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:23:06 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "user_socket_id"=>"AaxiHGhLywa1HcrTAAym", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3049ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"user_socket_id"=>"AaxiHGhLywa1HcrTAAym", "updated_at"=>2015-10-07 16:23:06 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3102ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:23:08 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (0.1ms)
+Completed 200 OK in 213ms (Views: 212.3ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:23:09 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3717ms
+Completed 200 OK in 4ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:23:09 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"AaxiHGhLywa1HcrTAAym", "user_socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3285ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"updated_at"=>2015-10-07 16:23:09 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3102ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-07 22:23:09 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3474ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2584ms
+Completed 200 OK in 5ms (Views: 3.0ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:23:09 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2742ms
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:23:09 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"-ZRIRpux-QRgsuaPAAyn", "user_socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3433ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"socket_id"=>"-ZRIRpux-QRgsuaPAAyn", "updated_at"=>2015-10-07 16:23:09 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3655ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:23:09 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "user_socket_id"=>"-ZRIRpux-QRgsuaPAAyn", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3026ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"user_socket_id"=>"-ZRIRpux-QRgsuaPAAyn", "updated_at"=>2015-10-07 16:23:09 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2799ms
+Completed 204 No Content in 4ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:28:49 +0600
+
+RuntimeError - EmberCLI Rails requires your Ember app to have an addon.
+
+From within your EmberCLI directory please run:
+
+  $ npm install --save-dev ember-cli-rails-addon@0.0.12
+
+in your Ember application root: /home/egor/RubymineProjects/nsumint/ios
+:
+  ember-cli-rails (0.3.5) lib/ember-cli/app.rb:180:in `check_addon!'
+  ember-cli-rails (0.3.5) lib/ember-cli/app.rb:153:in `prepare'
+  ember-cli-rails (0.3.5) lib/ember-cli/app.rb:34:in `run'
+  ember-cli-rails (0.3.5) lib/ember-cli/runner.rb:50:in `run!'
+  ember-cli-rails (0.3.5) lib/ember-cli/runner.rb:31:in `start_or_restart!'
+  ember-cli-rails (0.3.5) lib/ember-cli/runner.rb:15:in `process'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:62:in `block in process_path'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:86:in `block in each_app'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:86:in `each'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:86:in `each_app'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:62:in `process_path'
+  ember-cli-rails (0.3.5) lib/ember-cli/middleware.rb:13:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:28:54 +0600
+
+RuntimeError - EmberCLI Rails requires your Ember app to have an addon.
+
+From within your EmberCLI directory please run:
+
+  $ npm install --save-dev ember-cli-rails-addon@0.0.12
+
+in your Ember application root: /home/egor/RubymineProjects/nsumint/ios
+:
+  ember-cli-rails (0.3.5) lib/ember-cli/app.rb:180:in `check_addon!'
+  ember-cli-rails (0.3.5) lib/ember-cli/app.rb:153:in `prepare'
+  ember-cli-rails (0.3.5) lib/ember-cli/app.rb:34:in `run'
+  ember-cli-rails (0.3.5) lib/ember-cli/runner.rb:50:in `run!'
+  ember-cli-rails (0.3.5) lib/ember-cli/runner.rb:31:in `start_or_restart!'
+  ember-cli-rails (0.3.5) lib/ember-cli/runner.rb:15:in `process'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:62:in `block in process_path'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:86:in `block in each_app'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:86:in `each'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:86:in `each_app'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:62:in `process_path'
+  ember-cli-rails (0.3.5) lib/ember-cli/middleware.rb:13:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/92d0e6d9fa2190a5/variables" for 127.0.0.1 at 2015-10-07 22:28:54 +0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:28:59 +0600
+
+RuntimeError - EmberCLI Rails requires your Ember app to have an addon.
+
+From within your EmberCLI directory please run:
+
+  $ npm install --save-dev ember-cli-rails-addon@0.0.12
+
+in your Ember application root: /home/egor/RubymineProjects/nsumint/ios
+:
+  ember-cli-rails (0.3.5) lib/ember-cli/app.rb:180:in `check_addon!'
+  ember-cli-rails (0.3.5) lib/ember-cli/app.rb:153:in `prepare'
+  ember-cli-rails (0.3.5) lib/ember-cli/app.rb:34:in `run'
+  ember-cli-rails (0.3.5) lib/ember-cli/runner.rb:50:in `run!'
+  ember-cli-rails (0.3.5) lib/ember-cli/runner.rb:31:in `start_or_restart!'
+  ember-cli-rails (0.3.5) lib/ember-cli/runner.rb:15:in `process'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:62:in `block in process_path'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:86:in `block in each_app'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:86:in `each'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:86:in `each_app'
+  ember-cli-rails (0.3.5) lib/ember-cli-rails.rb:62:in `process_path'
+  ember-cli-rails (0.3.5) lib/ember-cli/middleware.rb:13:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/3894f468b060c3e2/variables" for 127.0.0.1 at 2015-10-07 22:28:59 +0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:29:19 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (105.2ms)
+Completed 200 OK in 452ms (Views: 452.1ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:29:29 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7808ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2954ms
+Completed 200 OK in 35ms (Views: 10.7ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:29:29 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "user_socket_id"=>"-ZRIRpux-QRgsuaPAAyn", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3488ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 6.1018ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"updated_at"=>2015-10-07 16:29:29 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5674ms
+Completed 204 No Content in 17ms
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:29:29 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"2bqcWzyrVJuTWcJvAAyl", "user_socket_id"=>"-ZRIRpux-QRgsuaPAAyn", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3672ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"updated_at"=>2015-10-07 16:29:29 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3932ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/stickers" for 127.0.0.1 at 2015-10-07 22:29:29 +0600
+Processing by Api::V1::StickersController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3960ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=stickers selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3459ms
+Completed 200 OK in 14ms (Views: 5.0ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:29:29 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2999ms
+Completed 200 OK in 3ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:29:30 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"aISvlk2wzgebBEocAAyr", "user_socket_id"=>"-ZRIRpux-QRgsuaPAAyn", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3960ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"socket_id"=>"aISvlk2wzgebBEocAAyr", "updated_at"=>2015-10-07 16:29:30 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4494ms
+Completed 204 No Content in 5ms
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:29:30 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"chatting", "socket_id"=>"-ZRIRpux-QRgsuaPAAyn", "user_socket_id"=>"aISvlk2wzgebBEocAAyr", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3462ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3011ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"user_socket_id"=>"aISvlk2wzgebBEocAAyr", "updated_at"=>2015-10-07 16:29:30 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4141ms
+Completed 204 No Content in 8ms
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:29:33 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.5566ms
+Completed 200 OK in 8ms (Views: 1.0ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:29:33 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"aISvlk2wzgebBEocAAyr", "user_socket_id"=>"", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4084ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"status"=>"online", "user_socket_id"=>"", "updated_at"=>2015-10-07 16:29:33 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.6697ms
+Completed 204 No Content in 8ms
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000001" for 127.0.0.1 at 2015-10-07 22:29:33 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"-ZRIRpux-QRgsuaPAAyn", "user_socket_id"=>"", "nickname"=>nil, "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5598ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000001')} update={"$set"=>{"status"=>"online", "user_socket_id"=>"", "updated_at"=>2015-10-07 16:29:33 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.7112ms
+Completed 204 No Content in 9ms
+
+
+Started GET "/ios/" for 127.0.0.1 at 2015-10-07 22:29:37 +0600
+
+ActionController::RoutingError (No route matches [GET] "/ios"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.9ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.9ms)
+
+
+Started GET "/welcome/ios/" for 127.0.0.1 at 2015-10-07 22:29:48 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (85.6ms)
+Completed 200 OK in 330ms (Views: 329.8ms)
+
+
+Started GET "/welcome/ios/" for 127.0.0.1 at 2015-10-07 22:30:13 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (14.5ms)
+Completed 200 OK in 242ms (Views: 242.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:33:48 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (93.6ms)
+Completed 200 OK in 431ms (Views: 430.3ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:33:58 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6623ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3140ms
+Completed 200 OK in 25ms (Views: 8.6ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:33:58 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"aISvlk2wzgebBEocAAyr", "user_socket_id"=>"", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4435ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"updated_at"=>2015-10-07 16:33:58 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.5131ms
+Completed 204 No Content in 13ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:33:58 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3004ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2635ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2065ms
+Completed 200 OK in 4ms (Views: 2.2ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:33:58 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"8EOTV6fu3-l0_JTXAAyu", "user_socket_id"=>"", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2842ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"socket_id"=>"8EOTV6fu3-l0_JTXAAyu", "updated_at"=>2015-10-07 16:33:58 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3030ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:34:05 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (87.0ms)
+Completed 200 OK in 292ms (Views: 291.4ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:39:03 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (135.3ms)
+Completed 200 OK in 585ms (Views: 584.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-07 22:39:27 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (96.5ms)
+Completed 200 OK in 321ms (Views: 320.6ms)
+
+
+Started GET "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:39:28 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.9799ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3812ms
+Completed 200 OK in 37ms (Views: 11.4ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:39:28 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"8EOTV6fu3-l0_JTXAAyu", "user_socket_id"=>"", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5374ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"updated_at"=>2015-10-07 16:39:28 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.6280ms
+Completed 204 No Content in 13ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-07 22:39:28 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3493ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3290ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2873ms
+Completed 200 OK in 6ms (Views: 3.1ms)
+
+
+Started PUT "/api/v1/users/561542d9d3054d0f4d000000" for 127.0.0.1 at 2015-10-07 22:39:29 +0600
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>"male", "user_sex"=>"all", "status"=>"online", "socket_id"=>"Ms76cGPDp1X4VbMdAAyy", "user_socket_id"=>"", "nickname"=>"", "my_faculty_id"=>"560eba50d3054d0c8f000000", "user_faculties"=>[{"id"=>"560eba50d3054d0c8f000000", "name"=>"FIT"}]}, "id"=>"561542d9d3054d0f4d000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5145ms
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('561542d9d3054d0f4d000000')} update={"$set"=>{"socket_id"=>"Ms76cGPDp1X4VbMdAAyy", "updated_at"=>2015-10-07 16:39:29 UTC, "user_faculties"=>[{"_id"=>BSON::ObjectId('560eba50d3054d0c8f000000'), "name"=>"FIT"}]}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 1.0910ms
+Completed 204 No Content in 9ms
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:40:50 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (98.3ms)
+Completed 200 OK in 465ms (Views: 464.8ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:43:41 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (37.6ms)
+Completed 200 OK in 379ms (Views: 378.7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:44:08 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (25.8ms)
+Completed 200 OK in 219ms (Views: 218.7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:44:39 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (29.7ms)
+Completed 200 OK in 231ms (Views: 230.5ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:49:16 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (32.1ms)
+Completed 200 OK in 232ms (Views: 232.0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:49:31 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (35.6ms)
+Completed 200 OK in 375ms (Views: 374.8ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:50:48 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (32.5ms)
+Completed 200 OK in 240ms (Views: 239.8ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:51:17 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (33.5ms)
+Completed 200 OK in 251ms (Views: 250.7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:51:29 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (32.4ms)
+Completed 200 OK in 250ms (Views: 249.4ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:51:41 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (31.4ms)
+Completed 200 OK in 227ms (Views: 226.2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/ratchicons.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:53:26 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (41.8ms)
+Completed 200 OK in 261ms (Views: 260.9ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:53:33 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (27.0ms)
+Completed 200 OK in 212ms (Views: 212.2ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:54:09 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (27.4ms)
+Completed 200 OK in 229ms (Views: 228.7ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:54:37 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (45.6ms)
+Completed 200 OK in 324ms (Views: 323.7ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:57:42 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (32.8ms)
+Completed 200 OK in 229ms (Views: 229.0ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:58:57 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (27.7ms)
+Completed 200 OK in 213ms (Views: 212.8ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:59:25 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (30.2ms)
+Completed 200 OK in 228ms (Views: 228.0ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 22:59:34 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (32.9ms)
+Completed 200 OK in 221ms (Views: 220.6ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 23:00:17 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (25.0ms)
+Completed 200 OK in 244ms (Views: 243.9ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 23:01:00 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (29.9ms)
+Completed 200 OK in 245ms (Views: 244.5ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 23:01:29 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (24.7ms)
+Completed 200 OK in 242ms (Views: 242.3ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 23:01:35 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (25.8ms)
+Completed 200 OK in 241ms (Views: 240.3ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 23:03:09 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (32.6ms)
+Completed 200 OK in 236ms (Views: 235.9ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 23:03:17 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (37.1ms)
+Completed 200 OK in 288ms (Views: 287.7ms)
+
+
+Started GET "/ios" for 127.0.0.1 at 2015-10-07 23:03:34 +0600
+Processing by WelcomeController#ios as HTML
+  Rendered welcome/ios.html.slim within layouts/application (26.3ms)
+Completed 200 OK in 239ms (Views: 239.1ms)

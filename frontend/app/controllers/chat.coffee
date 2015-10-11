@@ -48,7 +48,11 @@ ChatController = Ember.Controller.extend
           user_nickname = 'Девушка'
         else
           user_nickname = nickname
-      title = user_nickname + ' с ' + user_faculty.name
+      if user_faculty.name == 'Другой ВУЗ'
+        faculty = 'другого ВУЗа'
+      else
+        faculty = user_faculty.name
+      title = user_nickname + ' с ' + faculty
       time = (new Date()).toLocaleTimeString()
       $(".chatbox-wrapper .messages").append("<div class='message_wrapper'><div class='bubble message user_message pull-right'><div class='message_title'><div class='pull-left'>"+title+"</div><div class='time pull-right'><i class='fa fa-clock-o'>&nbsp;"+time+"</i></div></div><div class='message_body'>"+message+"</div></div><br class='clear'></div>")
       $('.chatbox-wrapper').animate { scrollTop: $('.chatbox-wrapper')[0].scrollHeight }, 200
