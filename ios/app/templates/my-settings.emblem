@@ -1,7 +1,0 @@
-.container
-  form
-    .form-group
-      h3.text-uppercase.text-center Ваш пол
-      button.btn.btn-block Парень
-      button.btn.btn-block Девушка
-

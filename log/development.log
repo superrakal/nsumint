@@ -9304,3 +9304,157 @@ Started GET "/ios" for 127.0.0.1 at 2015-10-07 23:03:34 +0600
 Processing by WelcomeController#ios as HTML
   Rendered welcome/ios.html.slim within layouts/application (26.3ms)
 Completed 200 OK in 239ms (Views: 239.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-19 23:28:28 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (99.0ms)
+Completed 200 OK in 462ms (Views: 462.2ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2015-10-19 23:28:35 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>nil, "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}}
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7398ms
+  MOPED: Retrying connection attempt 1 more time(s), nodes is [], seeds are [<Moped::Node resolved_address="127.0.0.1:27017">], cluster is #<Moped::Cluster:71271560 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>. Error backtrace is ["/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/cluster.rb:254:in `with_primary'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/collection.rb:127:in `block in insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/retryable.rb:30:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/retryable.rb:30:in `with_retry'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/collection.rb:125:in `insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/query_cache.rb:117:in `insert_with_clear_cache'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:79:in `insert_as_root'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:27:in `block in insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:118:in `block (2 levels) in prepare_insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:115:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:115:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:503:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:503:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:88:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/interceptable.rb:138:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:117:in `block in prepare_insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:84:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/interceptable.rb:138:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:116:in `prepare_insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:23:in `insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/savable.rb:23:in `save'", "/home/egor/RubymineProjects/nsumint/app/controllers/api/v1/users_controller.rb:20:in `create'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:198:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:20:in `block in process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:115:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:115:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:503:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:503:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:88:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications.rb:164:in `block in instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications.rb:164:in `instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/ember-cli-rails-0.3.5/lib/ember-cli/middleware.rb:14:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-pjax-0.8.0/lib/rack/pjax.rb:12:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/conditionalget.rb:38:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/remotipart-1.2.1/lib/remotipart/middleware.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:84:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:84:in `protected_app_call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:79:in `better_errors_call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:57:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `block in tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:26:in `tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'"]. runtime: n/a
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7920ms
+Completed 500 Internal Server Error in 267ms
+
+Moped::Errors::ConnectionFailure - Could not connect to a primary node for replica set #<Moped::Cluster:71271560 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>:
+  moped (2.0.7) lib/moped/cluster.rb:254:in `with_primary'
+  moped (2.0.7) lib/moped/collection.rb:127:in `block in insert'
+  moped (2.0.7) lib/moped/retryable.rb:30:in `call'
+  moped (2.0.7) lib/moped/retryable.rb:30:in `with_retry'
+  moped (2.0.7) lib/moped/retryable.rb:39:in `rescue in with_retry'
+  moped (2.0.7) lib/moped/retryable.rb:29:in `with_retry'
+  moped (2.0.7) lib/moped/collection.rb:125:in `insert'
+  mongoid (4.0.2) lib/mongoid/query_cache.rb:117:in `insert_with_clear_cache'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:79:in `insert_as_root'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:27:in `block in insert'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:118:in `block (2 levels) in prepare_insert'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  mongoid (4.0.2) lib/mongoid/interceptable.rb:138:in `run_callbacks'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:117:in `block in prepare_insert'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  mongoid (4.0.2) lib/mongoid/interceptable.rb:138:in `run_callbacks'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:116:in `prepare_insert'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:23:in `insert'
+  mongoid (4.0.2) lib/mongoid/persistable/savable.rb:23:in `save'
+  app/controllers/api/v1/users_controller.rb:20:in `create'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  ember-cli-rails (0.3.5) lib/ember-cli/middleware.rb:14:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-19 23:28:53 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (13.3ms)
+Completed 200 OK in 211ms (Views: 210.6ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2015-10-19 23:28:54 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>nil, "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}}
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6812ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=users documents=[{"_id"=>BSON::ObjectId('56252856d3054d128c000000'), "status"=>"created", "nickname"=>nil, "my_sex"=>nil, "user_sex"=>nil, "my_faculty_id"=>nil, "socket_id"=>nil, "user_socket_id"=>nil, "updated_at"=>2015-10-19 17:28:54 UTC, "created_at"=>2015-10-19 17:28:54 UTC}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 46.5362ms
+Completed 201 Created in 57ms (Views: 2.0ms)
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-10-19 23:28:54 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3166ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6642ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3383ms
+Completed 200 OK in 8ms (Views: 5.3ms)
+
+
+Started PUT "/api/v1/users/56252856d3054d128c000000" for 127.0.0.1 at 2015-10-19 23:28:54 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"zz0QGbxFrYkB-iEDADBD", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56252856d3054d128c000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56252856d3054d128c000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4549ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56252856d3054d128c000000')} update={"$set"=>{"socket_id"=>"zz0QGbxFrYkB-iEDADBD", "updated_at"=>2015-10-19 17:28:54 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.7915ms
+Completed 204 No Content in 8ms
