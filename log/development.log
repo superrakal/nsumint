@@ -9458,3 +9458,708 @@ Unpermitted parameter: user_faculties
   MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56252856d3054d128c000000')} update={"$set"=>{"socket_id"=>"zz0QGbxFrYkB-iEDADBD", "updated_at"=>2015-10-19 17:28:54 UTC}} flags=[]
                          COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.7915ms
 Completed 204 No Content in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 19:30:06 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (92.2ms)
+Completed 200 OK in 584ms (Views: 583.4ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2015-12-06 19:30:13 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>nil, "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}}
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8867ms
+  MOPED: Retrying connection attempt 1 more time(s), nodes is [], seeds are [<Moped::Node resolved_address="127.0.0.1:27017">], cluster is #<Moped::Cluster:70636280 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>. Error backtrace is ["/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/cluster.rb:254:in `with_primary'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/collection.rb:127:in `block in insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/retryable.rb:30:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/retryable.rb:30:in `with_retry'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/collection.rb:125:in `insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/query_cache.rb:117:in `insert_with_clear_cache'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:79:in `insert_as_root'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:27:in `block in insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:118:in `block (2 levels) in prepare_insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:115:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:115:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:503:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:503:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:88:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/interceptable.rb:138:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:117:in `block in prepare_insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:84:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/interceptable.rb:138:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:116:in `prepare_insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/creatable.rb:23:in `insert'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/persistable/savable.rb:23:in `save'", "/home/egor/RubymineProjects/nsumint/app/controllers/api/v1/users_controller.rb:20:in `create'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:198:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:20:in `block in process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:115:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:115:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:503:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:503:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:88:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications.rb:164:in `block in instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications.rb:164:in `instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/ember-cli-rails-0.3.5/lib/ember-cli/middleware.rb:14:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-pjax-0.8.0/lib/rack/pjax.rb:12:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/conditionalget.rb:38:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/remotipart-1.2.1/lib/remotipart/middleware.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:84:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:84:in `protected_app_call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:79:in `better_errors_call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:57:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `block in tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:26:in `tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'"]. runtime: n/a
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.8719ms
+Completed 500 Internal Server Error in 262ms
+
+Moped::Errors::ConnectionFailure - Could not connect to a primary node for replica set #<Moped::Cluster:70636280 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>:
+  moped (2.0.7) lib/moped/cluster.rb:254:in `with_primary'
+  moped (2.0.7) lib/moped/collection.rb:127:in `block in insert'
+  moped (2.0.7) lib/moped/retryable.rb:30:in `call'
+  moped (2.0.7) lib/moped/retryable.rb:30:in `with_retry'
+  moped (2.0.7) lib/moped/retryable.rb:39:in `rescue in with_retry'
+  moped (2.0.7) lib/moped/retryable.rb:29:in `with_retry'
+  moped (2.0.7) lib/moped/collection.rb:125:in `insert'
+  mongoid (4.0.2) lib/mongoid/query_cache.rb:117:in `insert_with_clear_cache'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:79:in `insert_as_root'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:27:in `block in insert'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:118:in `block (2 levels) in prepare_insert'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  mongoid (4.0.2) lib/mongoid/interceptable.rb:138:in `run_callbacks'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:117:in `block in prepare_insert'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  mongoid (4.0.2) lib/mongoid/interceptable.rb:138:in `run_callbacks'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:116:in `prepare_insert'
+  mongoid (4.0.2) lib/mongoid/persistable/creatable.rb:23:in `insert'
+  mongoid (4.0.2) lib/mongoid/persistable/savable.rb:23:in `save'
+  app/controllers/api/v1/users_controller.rb:20:in `create'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  ember-cli-rails (0.3.5) lib/ember-cli/middleware.rb:14:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 19:30:47 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (37.8ms)
+Completed 200 OK in 252ms (Views: 251.8ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2015-12-06 19:30:48 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>nil, "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}}
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6728ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=users documents=[{"_id"=>BSON::ObjectId('56643888d3054d0bd2000000'), "status"=>"created", "nickname"=>nil, "my_sex"=>nil, "user_sex"=>nil, "my_faculty_id"=>nil, "socket_id"=>nil, "user_socket_id"=>nil, "updated_at"=>2015-12-06 13:30:48 UTC, "created_at"=>2015-12-06 13:30:48 UTC}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 46.3591ms
+Completed 201 Created in 58ms (Views: 2.2ms)
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-12-06 19:30:48 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3116ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.1826ms
+  MOPED: Retrying connection attempt 1 more time(s), nodes is [], seeds are [<Moped::Node resolved_address="127.0.0.1:27017">], cluster is #<Moped::Cluster:70636280 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>. Error backtrace is ["/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/cluster.rb:254:in `with_primary'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/read_preference/primary.rb:55:in `block in with_node'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/retryable.rb:30:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/retryable.rb:30:in `with_retry'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/read_preference/primary.rb:54:in `with_node'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/cursor.rb:139:in `load_docs'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/query_cache.rb:234:in `block in load_docs'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/query_cache.rb:135:in `with_cache'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/query_cache.rb:234:in `load_docs'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/cursor.rb:28:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/query.rb:78:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/contextual/mongo.rb:122:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/contextual/mongo.rb:255:in `map'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/contextual/mongo.rb:255:in `map'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/contextual.rb:20:in `map'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/active_model_serializers-0.9.3/lib/active_model/array_serializer.rb:42:in `serializable_object'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/active_model_serializers-0.9.3/lib/active_model/serializable.rb:12:in `block in as_json'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications.rb:166:in `instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/active_model_serializers-0.9.3/lib/active_model/serializable.rb:55:in `instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/active_model_serializers-0.9.3/lib/active_model/serializable.rb:10:in `as_json'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/json/encoding.rb:35:in `encode'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/json/encoding.rb:22:in `encode'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/core_ext/object/json.rb:37:in `to_json_with_active_support_encoder'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:116:in `block in <module:Renderers>'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/active_model_serializers-0.9.3/lib/action_controller/serialization.rb:53:in `block (2 levels) in <module:Serialization>'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:45:in `block in _render_to_body_with_renderer'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/set.rb:263:in `each_key'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/set.rb:263:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:41:in `_render_to_body_with_renderer'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/renderers.rb:37:in `render_to_body'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/rendering.rb:25:in `render'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:16:in `render'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:44:in `block in render'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:43:in `render'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/remotipart-1.2.1/lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/responders-2.1.0/lib/action_controller/responder.rb:258:in `display'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/responders-2.1.0/lib/action_controller/responder.rb:212:in `api_behavior'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/responders-2.1.0/lib/action_controller/responder.rb:191:in `rescue in to_format'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/responders-2.1.0/lib/action_controller/responder.rb:185:in `to_format'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/responders-2.1.0/lib/action_controller/responder.rb:163:in `respond'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/responders-2.1.0/lib/action_controller/responder.rb:156:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/responders-2.1.0/lib/action_controller/respond_with.rb:203:in `respond_with'", "/home/egor/RubymineProjects/nsumint/app/controllers/api/v1/faculties_controller.rb:8:in `index'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:198:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:20:in `block in process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:115:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:115:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:503:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:503:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:88:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications.rb:164:in `block in instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications.rb:164:in `instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/ember-cli-rails-0.3.5/lib/ember-cli/middleware.rb:14:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-pjax-0.8.0/lib/rack/pjax.rb:12:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/remotipart-1.2.1/lib/remotipart/middleware.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:84:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:84:in `protected_app_call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:79:in `better_errors_call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:57:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `block in tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:26:in `tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'"]. runtime: n/a
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4437ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3350ms
+Completed 500 Internal Server Error in 256ms
+
+Moped::Errors::ConnectionFailure - Could not connect to a primary node for replica set #<Moped::Cluster:70636280 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>:
+  moped (2.0.7) lib/moped/cluster.rb:254:in `with_primary'
+  moped (2.0.7) lib/moped/read_preference/primary.rb:55:in `block in with_node'
+  moped (2.0.7) lib/moped/retryable.rb:30:in `call'
+  moped (2.0.7) lib/moped/retryable.rb:30:in `with_retry'
+  moped (2.0.7) lib/moped/retryable.rb:39:in `rescue in with_retry'
+  moped (2.0.7) lib/moped/retryable.rb:29:in `with_retry'
+  moped (2.0.7) lib/moped/read_preference/primary.rb:54:in `with_node'
+  moped (2.0.7) lib/moped/cursor.rb:139:in `load_docs'
+  mongoid (4.0.2) lib/mongoid/query_cache.rb:234:in `block in load_docs'
+  mongoid (4.0.2) lib/mongoid/query_cache.rb:135:in `with_cache'
+  mongoid (4.0.2) lib/mongoid/query_cache.rb:234:in `load_docs'
+  moped (2.0.7) lib/moped/cursor.rb:28:in `each'
+  moped (2.0.7) lib/moped/query.rb:78:in `each'
+  mongoid (4.0.2) lib/mongoid/contextual/mongo.rb:122:in `each'
+  mongoid (4.0.2) lib/mongoid/contextual/mongo.rb:255:in `map'
+  mongoid (4.0.2) lib/mongoid/contextual/mongo.rb:255:in `map'
+  mongoid (4.0.2) lib/mongoid/contextual.rb:20:in `map'
+  active_model_serializers (0.9.3) lib/active_model/array_serializer.rb:42:in `serializable_object'
+  active_model_serializers (0.9.3) lib/active_model/serializable.rb:12:in `block in as_json'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  active_model_serializers (0.9.3) lib/active_model/serializable.rb:55:in `instrument'
+  active_model_serializers (0.9.3) lib/active_model/serializable.rb:10:in `as_json'
+  activesupport (4.2.3) lib/active_support/json/encoding.rb:35:in `encode'
+  activesupport (4.2.3) lib/active_support/json/encoding.rb:22:in `encode'
+  activesupport (4.2.3) lib/active_support/core_ext/object/json.rb:37:in `to_json_with_active_support_encoder'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:116:in `block in <module:Renderers>'
+  active_model_serializers (0.9.3) lib/action_controller/serialization.rb:53:in `block (2 levels) in <module:Serialization>'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:45:in `block in _render_to_body_with_renderer'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/set.rb:263:in `each_key'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/set.rb:263:in `each'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:41:in `_render_to_body_with_renderer'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  remotipart (1.2.1) lib/remotipart/render_overrides.rb:14:in `render_with_remotipart'
+  responders (2.1.0) lib/action_controller/responder.rb:258:in `display'
+  responders (2.1.0) lib/action_controller/responder.rb:212:in `api_behavior'
+  responders (2.1.0) lib/action_controller/responder.rb:191:in `rescue in to_format'
+  responders (2.1.0) lib/action_controller/responder.rb:185:in `to_format'
+  responders (2.1.0) lib/action_controller/responder.rb:163:in `respond'
+  responders (2.1.0) lib/action_controller/responder.rb:156:in `call'
+  responders (2.1.0) lib/action_controller/respond_with.rb:203:in `respond_with'
+  app/controllers/api/v1/faculties_controller.rb:8:in `index'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  ember-cli-rails (0.3.5) lib/ember-cli/middleware.rb:14:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started PUT "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:30:49 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"98qtjLHRzzfqbW8RAAAs", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4330ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2816ms
+  MOPED: Retrying connection attempt 1 more time(s), nodes is [], seeds are [<Moped::Node resolved_address="127.0.0.1:27017">], cluster is #<Moped::Cluster:70636280 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>. Error backtrace is ["/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/cluster.rb:254:in `with_primary'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/read_preference/primary.rb:55:in `block in with_node'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/retryable.rb:30:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/retryable.rb:30:in `with_retry'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/read_preference/primary.rb:54:in `with_node'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/cursor.rb:139:in `load_docs'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/query_cache.rb:234:in `block in load_docs'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/query_cache.rb:135:in `with_cache'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/query_cache.rb:234:in `load_docs'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/cursor.rb:28:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/moped-2.0.7/lib/moped/query.rb:78:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/contextual/mongo.rb:122:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/contextual.rb:20:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/criteria/findable.rb:107:in `entries'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/criteria/findable.rb:107:in `from_database'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/criteria/findable.rb:75:in `multiple_from_db'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/criteria/findable.rb:19:in `execute_or_raise'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/criteria/findable.rb:40:in `find'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/mongoid-4.0.2/lib/mongoid/findable.rb:90:in `find'", "/home/egor/RubymineProjects/nsumint/app/controllers/api/v1/users_controller.rb:87:in `set_user'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:430:in `block in make_lambda'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:143:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:143:in `block in halting_and_conditional'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:502:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:502:in `block in call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:502:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:502:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:88:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/callbacks.rb:19:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications.rb:164:in `block in instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/notifications.rb:164:in `instrument'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/params_wrapper.rb:250:in `process_action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:137:in `process'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `each'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/ember-cli-rails-0.3.5/lib/ember-cli/middleware.rb:14:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-pjax-0.8.0/lib/rack/pjax.rb:12:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/conditionalget.rb:38:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/remotipart-1.2.1/lib/remotipart/middleware.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/flash.rb:260:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:225:in `context'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/session/abstract/id.rb:220:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/cookies.rb:560:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:84:in `run_callbacks'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:84:in `protected_app_call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:79:in `better_errors_call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/better_errors-2.1.1/lib/better_errors/middleware.rb:57:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `block in tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:26:in `tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `tagged'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/methodoverride.rb:22:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/activesupport-4.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/sendfile.rb:113:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'", "/home/egor/.rvm/gems/ruby-2.1.6/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'", "/home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'"]. runtime: n/a
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7641ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3495ms
+Completed 500 Internal Server Error in 255ms
+
+Moped::Errors::ConnectionFailure - Could not connect to a primary node for replica set #<Moped::Cluster:70636280 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>:
+  moped (2.0.7) lib/moped/cluster.rb:254:in `with_primary'
+  moped (2.0.7) lib/moped/read_preference/primary.rb:55:in `block in with_node'
+  moped (2.0.7) lib/moped/retryable.rb:30:in `call'
+  moped (2.0.7) lib/moped/retryable.rb:30:in `with_retry'
+  moped (2.0.7) lib/moped/retryable.rb:39:in `rescue in with_retry'
+  moped (2.0.7) lib/moped/retryable.rb:29:in `with_retry'
+  moped (2.0.7) lib/moped/read_preference/primary.rb:54:in `with_node'
+  moped (2.0.7) lib/moped/cursor.rb:139:in `load_docs'
+  mongoid (4.0.2) lib/mongoid/query_cache.rb:234:in `block in load_docs'
+  mongoid (4.0.2) lib/mongoid/query_cache.rb:135:in `with_cache'
+  mongoid (4.0.2) lib/mongoid/query_cache.rb:234:in `load_docs'
+  moped (2.0.7) lib/moped/cursor.rb:28:in `each'
+  moped (2.0.7) lib/moped/query.rb:78:in `each'
+  mongoid (4.0.2) lib/mongoid/contextual/mongo.rb:122:in `each'
+  mongoid (4.0.2) lib/mongoid/contextual.rb:20:in `each'
+  mongoid (4.0.2) lib/mongoid/criteria/findable.rb:107:in `entries'
+  mongoid (4.0.2) lib/mongoid/criteria/findable.rb:107:in `from_database'
+  mongoid (4.0.2) lib/mongoid/criteria/findable.rb:75:in `multiple_from_db'
+  mongoid (4.0.2) lib/mongoid/criteria/findable.rb:19:in `execute_or_raise'
+  mongoid (4.0.2) lib/mongoid/criteria/findable.rb:40:in `find'
+  mongoid (4.0.2) lib/mongoid/findable.rb:90:in `find'
+  app/controllers/api/v1/users_controller.rb:87:in `set_user'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:430:in `block in make_lambda'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:143:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:143:in `block in halting_and_conditional'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `each'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  ember-cli-rails (0.3.5) lib/ember-cli/middleware.rb:14:in `call'
+  rack-pjax (0.8.0) lib/rack/pjax.rb:12:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/egor/.rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 19:30:54 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (20.3ms)
+Completed 200 OK in 217ms (Views: 216.7ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2015-12-06 19:30:55 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>nil, "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}}
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3419ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=users documents=[{"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001'), "status"=>"created", "nickname"=>nil, "my_sex"=>nil, "user_sex"=>nil, "my_faculty_id"=>nil, "socket_id"=>nil, "user_socket_id"=>nil, "updated_at"=>2015-12-06 13:30:55 UTC, "created_at"=>2015-12-06 13:30:55 UTC}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4356ms
+Completed 201 Created in 7ms (Views: 0.6ms)
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-12-06 19:30:55 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3386ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.6260ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2856ms
+Completed 200 OK in 7ms (Views: 4.7ms)
+
+
+Started PUT "/api/v1/users/5664388fd3054d0bd2000001" for 127.0.0.1 at 2015-12-06 19:30:55 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"b3ZocoI_ecl16hpQAAAt", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"5664388fd3054d0bd2000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3409ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001')} update={"$set"=>{"socket_id"=>"b3ZocoI_ecl16hpQAAAt", "updated_at"=>2015-12-06 13:30:55 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.7162ms
+Completed 204 No Content in 5ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6118ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ГГФ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2317ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('566438b9d3054d0d85000000'), "name"=>"ГГФ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2787ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 19:31:39 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (12.6ms)
+Completed 200 OK in 488ms (Views: 487.8ms)
+
+
+Started GET "/api/v1/users/5664388fd3054d0bd2000001" for 127.0.0.1 at 2015-12-06 19:31:43 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"5664388fd3054d0bd2000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1718ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.1165ms
+Completed 200 OK in 21ms (Views: 4.0ms)
+
+
+Started PUT "/api/v1/users/5664388fd3054d0bd2000001" for 127.0.0.1 at 2015-12-06 19:31:43 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"b3ZocoI_ecl16hpQAAAt", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"5664388fd3054d0bd2000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 4.1709ms
+Unpermitted parameter: user_faculties
+Completed 204 No Content in 26ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-12-06 19:31:43 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.4477ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.1039ms
+Completed 200 OK in 18ms (Views: 7.8ms)
+
+
+Started PUT "/api/v1/users/5664388fd3054d0bd2000001" for 127.0.0.1 at 2015-12-06 19:31:43 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"BCoV7kLn8FExXrGKAAAu", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"5664388fd3054d0bd2000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 1.1575ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001')} update={"$set"=>{"socket_id"=>"BCoV7kLn8FExXrGKAAAu", "updated_at"=>2015-12-06 13:31:43 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 1.3392ms
+Completed 204 No Content in 23ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.6526ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ГГФ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2997ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ГФ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1924ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e82000000'), "name"=>"ГФ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2935ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"МедФ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2005ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e82000001'), "name"=>"МедФ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2012ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ММФ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1781ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e82000002'), "name"=>"ММФ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.1826ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ФЖ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1640ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e82000003'), "name"=>"ФЖ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.1905ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ФЕН"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1740ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e82000004'), "name"=>"ФЕН"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.1838ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ФИТ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1681ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e82000005'), "name"=>"ФИТ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.1800ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ФИЯ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1798ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e82000006'), "name"=>"ФИЯ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.1788ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ФП"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1607ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e82000007'), "name"=>"ФП"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.1786ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ФФ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1624ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e82000008'), "name"=>"ФФ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.1810ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ФилФ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1814ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e82000009'), "name"=>"ФилФ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.1602ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ЭФ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2027ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e8200000a'), "name"=>"ЭФ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2160ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"ЮФ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1829ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e8200000b'), "name"=>"ЮФ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.2031ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{"name"=>"Другой ВУЗ"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1757ms
+  MOPED: 127.0.0.1:27017 INSERT       database=nsumint_development collection=faculties documents=[{"_id"=>BSON::ObjectId('56643961d3054d0e8200000c'), "name"=>"Другой ВУЗ"}] flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.1915ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 19:34:28 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (13.5ms)
+Completed 200 OK in 202ms (Views: 201.7ms)
+
+
+Started GET "/api/v1/users/5664388fd3054d0bd2000001" for 127.0.0.1 at 2015-12-06 19:34:28 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"5664388fd3054d0bd2000001"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3221ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2685ms
+Completed 200 OK in 4ms (Views: 0.5ms)
+
+
+Started PUT "/api/v1/users/5664388fd3054d0bd2000001" for 127.0.0.1 at 2015-12-06 19:34:29 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"BCoV7kLn8FExXrGKAAAu", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"5664388fd3054d0bd2000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3603ms
+Unpermitted parameter: user_faculties
+Completed 204 No Content in 4ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-12-06 19:34:29 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3998ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2944ms
+Completed 200 OK in 4ms (Views: 2.3ms)
+
+
+Started PUT "/api/v1/users/5664388fd3054d0bd2000001" for 127.0.0.1 at 2015-12-06 19:34:29 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"-NBeUNW0RC_TGIr4AAAv", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"5664388fd3054d0bd2000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3250ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('5664388fd3054d0bd2000001')} update={"$set"=>{"socket_id"=>"-NBeUNW0RC_TGIr4AAAv", "updated_at"=>2015-12-06 13:34:29 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3576ms
+Completed 204 No Content in 4ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 19:35:01 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (12.7ms)
+Completed 200 OK in 209ms (Views: 208.5ms)
+
+
+Started GET "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:35:01 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2978ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2041ms
+Completed 200 OK in 4ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:35:02 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>nil, "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2730ms
+Unpermitted parameter: user_faculties
+Completed 204 No Content in 4ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-12-06 19:35:02 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3092ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3581ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3326ms
+Completed 200 OK in 5ms (Views: 3.1ms)
+
+
+Started PUT "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:35:02 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"ZVOthoeMnzFKNlAwAAAw", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2687ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} update={"$set"=>{"socket_id"=>"ZVOthoeMnzFKNlAwAAAw", "updated_at"=>2015-12-06 13:35:02 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3562ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 19:35:15 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (13.5ms)
+Completed 200 OK in 210ms (Views: 210.1ms)
+
+
+Started GET "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:35:16 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4463ms
+Completed 200 OK in 4ms (Views: 0.7ms)
+
+
+Started PUT "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:35:16 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"ZVOthoeMnzFKNlAwAAAw", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3865ms
+Unpermitted parameter: user_faculties
+Completed 204 No Content in 4ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-12-06 19:35:16 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4432ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4091ms
+Completed 200 OK in 6ms (Views: 3.4ms)
+
+
+Started PUT "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:35:16 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"GgKZrpPf3akVFAWlAAAx", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3221ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} update={"$set"=>{"socket_id"=>"GgKZrpPf3akVFAWlAAAx", "updated_at"=>2015-12-06 13:35:16 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4315ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 19:35:26 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (13.8ms)
+Completed 200 OK in 204ms (Views: 204.0ms)
+
+
+Started GET "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:35:27 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3772ms
+Completed 200 OK in 4ms (Views: 0.6ms)
+
+
+Started PUT "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:35:27 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"GgKZrpPf3akVFAWlAAAx", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4461ms
+Unpermitted parameter: user_faculties
+Completed 204 No Content in 5ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-12-06 19:35:27 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4308ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3448ms
+Completed 200 OK in 5ms (Views: 2.7ms)
+
+
+Started PUT "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:35:27 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"lWLYsfLTmVePf4ZLAAAy", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2978ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} update={"$set"=>{"socket_id"=>"lWLYsfLTmVePf4ZLAAAy", "updated_at"=>2015-12-06 13:35:27 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.3350ms
+Completed 204 No Content in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-06 19:36:18 +0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.slim within layouts/application (13.3ms)
+Completed 200 OK in 241ms (Views: 240.9ms)
+
+
+Started GET "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:36:19 +0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.2878ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2568ms
+Completed 200 OK in 4ms (Views: 0.5ms)
+
+
+Started PUT "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:36:19 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"lWLYsfLTmVePf4ZLAAAy", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3500ms
+Unpermitted parameter: user_faculties
+Completed 204 No Content in 4ms
+
+
+Started GET "/api/v1/faculties" for 127.0.0.1 at 2015-12-06 19:36:19 +0600
+Processing by Api::V1::FacultiesController#index as JSON
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4630ms
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=faculties selector={"$query"=>{}, "$orderby"=>{"name"=>1}} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3130ms
+Completed 200 OK in 5ms (Views: 2.8ms)
+
+
+Started PUT "/api/v1/users/56643888d3054d0bd2000000" for 127.0.0.1 at 2015-12-06 19:36:20 +0600
+Value for params[:user][:user_faculties] was set to nil, because it was one of [], [null] or [null, null, ...]. Go to http://guides.rubyonrails.org/security.html#unsafe-query-generation for more information.
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user"=>{"my_sex"=>nil, "user_sex"=>nil, "status"=>"created", "socket_id"=>"VRu0eWOpp-TpCH4yAAAz", "user_socket_id"=>nil, "nickname"=>nil, "my_faculty_id"=>nil, "user_faculties"=>nil}, "id"=>"56643888d3054d0bd2000000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4528ms
+Unpermitted parameter: user_faculties
+  MOPED: 127.0.0.1:27017 UPDATE       database=nsumint_development collection=users selector={"_id"=>BSON::ObjectId('56643888d3054d0bd2000000')} update={"$set"=>{"socket_id"=>"VRu0eWOpp-TpCH4yAAAz", "updated_at"=>2015-12-06 13:36:20 UTC}} flags=[]
+                         COMMAND      database=nsumint_development command={:getlasterror=>1, :w=>1} runtime: 0.4060ms
+Completed 204 No Content in 6ms
