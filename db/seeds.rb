@@ -1,3 +1,4 @@
+Faculty.destroy_all
 Faculty.find_or_create_by(name: 'ГГФ')
 Faculty.find_or_create_by(name: 'ГФ')
 Faculty.find_or_create_by(name: 'МедФ')
